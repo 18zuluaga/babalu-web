@@ -27,6 +27,12 @@ const menuSections = [
     links: [
       { href: "/sostenibilidad", label: "Sostenibilidad & Equipo" },
     ]
+  },
+  {
+    title: "Países",
+    links: [
+      { href: "/paises", label: "Panamá & Chile" },
+    ]
   }
 ];
 
