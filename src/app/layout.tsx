@@ -15,6 +15,14 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
+  metadataBase: (() => {
+    const envUrl = process.env.NEXT_PUBLIC_SITE_URL || process.env.VERCEL_URL;
+    try {
+      return envUrl ? new URL(envUrl.startsWith("http") ? envUrl : `https://${envUrl}`) : new URL("http://localhost:3000");
+    } catch {
+      return new URL("http://localhost:3000");
+    }
+  })(),
   title: "Babalu | Moda activa y deportiva",
   description: "Encuentra tendencias en ropa deportiva: enterizos, vestidos, tops, leggins y más.",
   openGraph: {
@@ -24,7 +32,7 @@ export const metadata: Metadata = {
     locale: "es_CO",
     siteName: "Babalu",
     type: "website",
-    url: "https://",
+    url: "/",
   },
   icons: { icon: "/favicon.ico" },
 };

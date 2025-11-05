@@ -22,9 +22,9 @@ export default function Page() {
       <Accordion title="Indicadores macroeconómicos" defaultOpen={true} color="border-blue-200 bg-blue-50">
         <div className="space-y-4">
           <div>
-            <h3 className="mb-2 text-lg font-semibold text-zinc-800">Producto Interno Bruto (PIB)</h3>
-            <button onClick={() => setOpenImg("/doc4_assets/doc4_image1.png")} className="mb-3 block overflow-hidden rounded-xl border bg-white p-2 hover:shadow">
-              <Image src="/doc4_assets/doc4_image1.png" alt="PIB Panamá" width={0} height={0} sizes="100vw" style={{ width: "100%", height: "auto" }} />
+            <h3 className="mb-2 text-lg font-semibold text-zinc-800">Productos Interno Bruto (PIB)</h3>
+            <button onClick={() => setOpenImg("linea.png")} className="mb-3 block overflow-hidden rounded-xl border bg-white p-2 hover:shadow">
+              <Image src="/linea.png" alt="PIB Panamá" width={0} height={0} sizes="100vw" style={{ width: "100%", height: "auto" }} />
             </button>
             <p>La gráfica muestra que Panamá ha tenido tasas de crecimiento del PIB muy altas en la región, lo que muestra una economía activa y con oportunidades (2015-2019), en el 2020 se observa una caída pronunciada debido a la pandemia de (-18,9) pero en el 2021 se puede observa un fuerte rebote 15,1 (el pico en la gráfica), lo que demuestra la rápida reactivación de su economía y hasta el 2024 se puede evidenciar que ha disminuido pero manteniéndose en un (1,6).</p>
             <p>Todo esto demuestra que en términos de internacionalización tiene impactos tanto positivos como negativos ya que tiene el crecimiento proyectado en los años posteriores a 2021 justifica la entrada al mercado ya que se recupera de manera rápida, pero también puede ocurrir una caída libre como en 2020 esto volviéndose una montaña rusa, todo esto sucede porque la economía de Panamá depende mucho del comercio mundial por su canal de Panamá y la plataforma logística asociada (puertos, zonas libres, transportes son el corazón de su internacionalización. Los ingresos directos e indirectos del canal contribuyen significativamente al PIB y consolidan a Panamá como un eje global de comercio y servicios.</p>
@@ -34,11 +34,11 @@ export default function Page() {
 
           <div>
             <h3 className="mb-2 text-lg font-semibold text-zinc-800">PIB en el sector en que la empresa opere</h3>
-            <button onClick={() => setOpenImg("/doc4_assets/doc4_image2.png")} className="mb-3 block overflow-hidden rounded-xl border bg-white p-2 hover:shadow">
-              <Image src="/doc4_assets/doc4_image2.png" alt="PIB sector Panamá" width={0} height={0} sizes="100vw" style={{ width: "100%", height: "auto" }} />
+            <button onClick={() => setOpenImg("/comercio.jpeg")} className="mb-3 block overflow-hidden rounded-xl border bg-white p-2 hover:shadow">
+              <img src="/comercio.jpeg" alt="PIB sector Panamá" className="w-full h-auto" />
             </button>
-            <button onClick={() => setOpenImg("/doc4_assets/doc4_image3.png")} className="mb-3 block overflow-hidden rounded-xl border bg-white p-2 hover:shadow">
-              <Image src="/doc4_assets/doc4_image3.png" alt="Inflación Panamá" width={0} height={0} sizes="100vw" style={{ width: "100%", height: "auto" }} />
+            <button onClick={() => setOpenImg("/industrias.jp")} className="mb-3 block overflow-hidden rounded-xl border bg-white p-2 hover:shadow">
+              <Image src="/industrias.jpeg" alt="Inflación Panamá" width={0} height={0} sizes="100vw" style={{ width: "100%", height: "auto" }} />
             </button>
             <p>Comercio al por mayor y al por menor</p>
             <p>Industrias Manufactureras</p>
@@ -48,8 +48,8 @@ export default function Page() {
 
           <div>
             <h3 className="mb-2 text-lg font-semibold text-zinc-800">Inflación</h3>
-            <button onClick={() => setOpenImg("/doc4_assets/doc4_image4.jpeg")} className="mb-3 block overflow-hidden rounded-xl border bg-white p-2 hover:shadow">
-              <Image src="/doc4_assets/doc4_image4.jpeg" alt="Poder adquisitivo Panamá" width={0} height={0} sizes="100vw" style={{ width: "100%", height: "auto" }} />
+            <button onClick={() => setOpenImg("/inflacion.jpeg")} className="mb-3 block overflow-hidden rounded-xl border bg-white p-2 hover:shadow">
+              <Image src="/inflacion.jpeg" alt="Poder adquisitivo Panamá" width={0} height={0} sizes="100vw" style={{ width: "100%", height: "auto" }} />
             </button>
             <p>En estos diez años (2015–2024) Panamá ha tenido una inflación muy baja y bastante estable; si miramos los números, el promedio queda más o menos de 0.8 % anual. Nos llama la atención que en 2019 y 2020 los precios incluso bajaron un poco, y después hubo un pequeño aumento en 2022–2023. Gran parte de esto se explica porque el país usa el dólar, eso le quita mucha volatilidad al tipo de cambio y ayuda a que los precios no se disparen. Para una empresa que quiere llegar desde otro país, eso es tranquilizador porque permite planear mejor los costos. Ahora, también pienso que cuando la inflación está muy baja puede querer decir que la demanda interna no está muy fuerte. Básicamente la estabilidad facilita la internacionalización, pero vale la pena vigilar lo que viene siendo la demanda local.</p>
             <p><strong>Calificación:</strong> 4</p>
@@ -58,8 +58,8 @@ export default function Page() {
 
           <div>
             <h3 className="mb-2 text-lg font-semibold text-zinc-800">Poder adquisitivo</h3>
-            <button onClick={() => setOpenImg("/doc4_assets/doc4_image5.jpeg")} className="mb-3 block overflow-hidden rounded-xl border bg-white p-2 hover:shadow">
-              <Image src="/doc4_assets/doc4_image5.jpeg" alt="Tasa de interés Panamá" width={0} height={0} sizes="100vw" style={{ width: "100%", height: "auto" }} />
+            <button onClick={() => setOpenImg("/poderadquisitivo.jpeg")} className="mb-3 block overflow-hidden rounded-xl border bg-white p-2 hover:shadow">
+              <Image src="/poderadquisitivo.jpeg" alt="Tasa de interés Panamá" width={0} height={0} sizes="100vw" style={{ width: "100%", height: "auto" }} />
             </button>
             <p>Si miramos el PIB per cápita entre 2015 y 2024, podemos apreciar que pasó de US$14 000 a más de US$19 000. Eso significa que el ingreso promedio subió y la gente, en promedio, tiene más capacidad de compra que antes (aunque 2020 fue un año “complicado” por la pandemia). Para las empresas que evalúan entrar al mercado panameño, esto es una buena señal ya que mayor poder adquisitivo suele ser más clientes potenciales y posibilidad de vender productos con mayor valor agregado. Sin embargo, una aclaración importante es que en promedio no cuenta cómo se distribuye la renta. El FMI y otros organismos han señalado que la desigualdad sigue siendo relevante o sea que no todos ganan más, y por eso conviene segmentar la oferta y no asumir que todo el país tiene el mismo poder de compra.</p>
             <p><strong>Calificación:</strong> 4</p>
@@ -68,8 +68,8 @@ export default function Page() {
 
           <div>
             <h3 className="mb-2 text-lg font-semibold text-zinc-800">Tasa de interés</h3>
-            <button onClick={() => setOpenImg("/doc4_assets/doc4_image6.png")} className="mb-3 block overflow-hidden rounded-xl border bg-white p-2 hover:shadow">
-              <Image src="/doc4_assets/doc4_image6.png" alt="Tipo de cambio Panamá" width={0} height={0} sizes="100vw" style={{ width: "100%", height: "auto" }} />
+            <button onClick={() => setOpenImg("/tasadeinteres.jpeg")} className="mb-3 block overflow-hidden rounded-xl border bg-white p-2 hover:shadow">
+              <Image src="/tasadeinteres.jpeg" alt="Tipo de cambio Panamá" width={0} height={0} sizes="100vw" style={{ width: "100%", height: "auto" }} />
             </button>
             <p>Esta gráfica muestra una tendencia general de crecimiento en la Tasa de Interés Real desde el 2014 hasta alcanzar un pico alrededor del año 2020 de 7,5%. A partir de allí, el sistema comenzó a descender con valores como 5.4% en 2021 y continúa disminuyendo hasta el último punto disponible en 2022 de 4,6%. Esta tendencia es favorable para la inversión, ya que un menor costo real del endeudamiento puede estimular el capital de trabajo. La principal característica y ventaja de Panamá en este ámbito es su sistema dolarizado. Esto es altamente valorado por los inversores internacionales para la planificación financiera a largo plazo. No obstante, esta misma dependencia limita la autonomía monetaria del país. Aunque el costo del crédito puede aumentar si la Reserva Federal de EE. UU (FED) sube las tasas, la previsibilidad del sistema financiero hace que este indicador sea favorable teniendo una calificación de 4</p>
             <p><strong>Referencia:</strong> The World Bank. (2022). Real interest rate (%) – Panama. https://datos.bancomundial.org/indicador/FR.INR.RINR?end=2022&locations=PA&start=2014&type=points&view=chart</p>
@@ -188,24 +188,24 @@ export default function Page() {
           
           <div>
             <h3 className="mb-2 text-lg font-semibold text-zinc-800">Empleo y desempleo</h3>
-            <button onClick={() => setOpenImg("/doc4_assets/doc4_image14.png")} className="mb-3 block overflow-hidden rounded-xl border bg-white p-2 hover:shadow">
-              <Image src="/doc4_assets/doc4_image14.png" alt="Tasa de cambio Chile" width={0} height={0} sizes="100vw" style={{ width: "100%", height: "auto" }} />
+            <button onClick={() => setOpenImg("/empleoydesempleo.jpeg")} className="mb-3 block overflow-hidden rounded-xl border bg-white p-2 hover:shadow">
+              <Image src="/empleoydesempleo.jpeg" alt="Tasa de cambio Chile" width={0} height={0} sizes="100vw" style={{ width: "100%", height: "auto" }} />
             </button>
             <p>En los últimos años, el empleo en Chile ha tenido varios cambios. La tasa de desempleo ha estado subiendo y bajando según la situación económica del país. En 2020, durante la pandemia, el desempleo llegó a cerca del 11 %. En 2021 bajó un poco y se mantuvo alrededor del 9 %. Para el 2024 y parte del 2025, el desempleo se ha mantenido entre el 8 % y el 9 %. Hace unos años, entre 2014 y 2018, el desempleo era más bajo, cerca del 6 % o 7 %, lo que muestra que la economía chilena ha pasado por varios cambios. Actualmente, la tasa de empleo en Chile está cerca del 56 %. En general, el país muestra señales de recuperación después de los años más difíciles, aunque el ritmo de crecimiento laboral sigue siendo moderado. <strong>Calificación:</strong> 3</p>
             <p><strong>Referencias:</strong> INE (2025) tasa de desocupación; Macrotrends (2025); YCharts (2025); Trading Economics (2025).</p>
           </div>
           <div>
             <h3 className="mb-2 text-lg font-semibold text-zinc-800">Inflación y poder adquisitivo</h3>
-            <button onClick={() => setOpenImg("/doc4_assets/doc4_image15.png")} className="mb-3 block overflow-hidden rounded-xl border bg-white p-2 hover:shadow">
-              <Image src="/doc4_assets/doc4_image15.png" alt="Tasa de cambio Chile" width={0} height={0} sizes="100vw" style={{ width: "100%", height: "auto" }} />
+            <button onClick={() => setOpenImg("/inflacion2.jpeg")} className="mb-3 block overflow-hidden rounded-xl border bg-white p-2 hover:shadow">
+              <Image src="/inflacion2.jpeg" alt="Tasa de cambio Chile" width={0} height={0} sizes="100vw" style={{ width: "100%", height: "auto" }} />
             </button>
             <p>En los últimos años, en Chile los precios han subido de forma moderada, lo que afecta el poder adquisitivo de las familias. Por ejemplo, la inflación anual fue de alrededor de 4,3 % en 2024. En 2023 llegó a aproximadamente 7,6 %, una cifra mucho más elevada que hace unos años. Al mismo tiempo, el indicador de producción por persona ajustado por paridad de poder adquisitivo (PPP) muestra que Chile tiene un nivel de ingreso per cápita relativamente alto: en 2024, ese valor fue de unos 30.182 USD en términos PPP. <strong>Calificación:</strong> 4</p>
             <p><strong>Referencias:</strong> Banco Mundial (2024) inflación; FocusEconomics (2024) CPI; Trading Economics (2024) PPP.</p>
           </div>
           <div>
             <h3 className="mb-2 text-lg font-semibold text-zinc-800">Tasa de cambio</h3>
-            <button onClick={() => setOpenImg("/doc4_assets/doc4_image16.png")} className="mb-3 block overflow-hidden rounded-xl border bg-white p-2 hover:shadow">
-              <Image src="/doc4_assets/doc4_image16.png" alt="Tasa de cambio Chile" width={0} height={0} sizes="100vw" style={{ width: "100%", height: "auto" }} />
+            <button onClick={() => setOpenImg("/tasadecambio.jpeg")} className="mb-3 block overflow-hidden rounded-xl border bg-white p-2 hover:shadow">
+              <Image src="/tasadecambio.jpeg" alt="Tasa de cambio Chile" width={0} height={0} sizes="100vw" style={{ width: "100%", height: "auto" }} />
             </button>
             <p>La gráfica del tipo de cambio entre el peso chileno (CLP) y el dólar estadounidense (USD) muestra cómo el valor del peso ha variado durante los últimos años. Se observa una tendencia general al aumento del valor del dólar frente al peso, lo que significa que la moneda chilena se ha ido depreciando. En el gráfico, el tipo de cambio pasa de niveles cercanos a los 800 pesos por dólar en años anteriores, hasta ubicarse alrededor de los 940 a 950 pesos por dólar en 2025. Este comportamiento refleja la influencia de distintos factores económicos, como el aumento de la inflación, los movimientos en el precio del cobre y la política monetaria del Banco Central. Cuando el dólar sube frente al peso, los productos importados se encarecen; sin embargo, también puede favorecer las exportaciones. <strong>Calificación:</strong> 3</p>
             <p><strong>Referencias:</strong> Banco Central de Chile (2025) tipo de cambio; Trading Economics; CEIC Data; XE.</p>
