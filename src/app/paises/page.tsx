@@ -83,9 +83,6 @@ export default function Page() {
             <button onClick={() => setOpenImg("/doc4_assets/doc4_image8.png")} className="mb-3 block overflow-hidden rounded-xl border bg-white p-2 hover:shadow">
               <Image src="/doc4_assets/doc4_image8.png" alt="PIB Chile" width={0} height={0} sizes="100vw" style={{ width: "100%", height: "auto" }} />
             </button>
-            <button onClick={() => setOpenImg("/doc4_assets/doc4_image8.png")} className="mb-3 block overflow-hidden rounded-xl border bg-white p-2 hover:shadow">
-              <Image src="/doc4_assets/doc4_image8.png" alt="Empleo Panamá" width={0} height={0} sizes="100vw" style={{ width: "100%", height: "auto" }} />
-            </button>
             <p>En esta gráfica se puede ver claramente que el tipo de cambio del balboa panameño (PAB) frente al dólar estadounidense (USD) se mantiene totalmente estable en un valor de 1.000. Esto quiere decir que un balboa siempre vale lo mismo que un dólar estadounidense, sin ninguna variación.</p>
             <p>Esta situación se debe a que Panamá tiene una economía dolarizada desde el año 1904. En otras palabras, el país adoptó el dólar estadounidense como su moneda principal, aunque también usa el balboa como referencia. Por eso, el tipo de cambio nunca cambia: 1 PAB siempre equivale a 1 USD.</p>
             <p>Panamá no cuenta con una política monetaria propia, ya que depende completamente del dólar. Gracias a esto, el país ha logrado mantener una economía muy estable, baja inflación y confianza internacional, porque su moneda no se devalúa. Sin embargo, también tiene una desventaja importante al no tener un banco central que controle su propia moneda, Panamá no puede modificar su política monetaria en caso de una crisis o si necesita ajustar su economía.</p>
