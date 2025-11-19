@@ -9,6 +9,16 @@ const powerBIImages = [
   "/doc4_assets/doc4_image17.png", // Solo la última imagen
 ];
 
+const powerBITrabajo4Images = [
+  "/trabajo4_assets/WhatsApp Image 2025-11-18 at 11.16.17 PM.jpeg",
+  "/trabajo4_assets/WhatsApp Image 2025-11-18 at 11.16.29 PM.jpeg",
+  "/trabajo4_assets/WhatsApp Image 2025-11-18 at 11.16.48 PM.jpeg",
+  "/trabajo4_assets/WhatsApp Image 2025-11-18 at 11.17.01 PM.jpeg",
+  "/trabajo4_assets/doc4_image5.png",
+  "/trabajo4_assets/doc4_image6.png",
+  "/trabajo4_assets/WhatsApp Image 2025-11-18 at 11.17.15 PM.jpeg",
+];
+
 export default function Page() {
   const [openImg, setOpenImg] = useState<string | null>(null);
 
@@ -23,7 +33,7 @@ export default function Page() {
         <div className="space-y-4">
           <div>
             <h3 className="mb-2 text-lg font-semibold text-zinc-800">Productos Interno Bruto (PIB)</h3>
-            <button onClick={() => setOpenImg("linea.png")} className="mb-3 block overflow-hidden rounded-xl border bg-white p-2 hover:shadow">
+            <button onClick={() => setOpenImg("/linea.png")} className="mb-3 block overflow-hidden rounded-xl border bg-white p-2 hover:shadow">
               <Image src="/linea.png" alt="PIB Panamá" width={0} height={0} sizes="100vw" style={{ width: "100%", height: "auto" }} />
             </button>
             <p>La gráfica muestra que Panamá ha tenido tasas de crecimiento del PIB muy altas en la región, lo que muestra una economía activa y con oportunidades (2015-2019), en el 2020 se observa una caída pronunciada debido a la pandemia de (-18,9) pero en el 2021 se puede observa un fuerte rebote 15,1 (el pico en la gráfica), lo que demuestra la rápida reactivación de su economía y hasta el 2024 se puede evidenciar que ha disminuido pero manteniéndose en un (1,6).</p>
@@ -37,7 +47,7 @@ export default function Page() {
             <button onClick={() => setOpenImg("/comercio.jpeg")} className="mb-3 block overflow-hidden rounded-xl border bg-white p-2 hover:shadow">
               <img src="/comercio.jpeg" alt="PIB sector Panamá" className="w-full h-auto" />
             </button>
-            <button onClick={() => setOpenImg("/industrias.jp")} className="mb-3 block overflow-hidden rounded-xl border bg-white p-2 hover:shadow">
+            <button onClick={() => setOpenImg("/industrias.jpeg")} className="mb-3 block overflow-hidden rounded-xl border bg-white p-2 hover:shadow">
               <Image src="/industrias.jpeg" alt="Inflación Panamá" width={0} height={0} sizes="100vw" style={{ width: "100%", height: "auto" }} />
             </button>
             <p>Comercio al por mayor y al por menor</p>
@@ -270,6 +280,31 @@ export default function Page() {
     </div>
   );
 
+  const powerBITrabajo4Content = (
+    <div className="space-y-6">
+      <div className="text-center">
+        <h2 className="mb-2 text-3xl font-bold text-zinc-800">Power BI (Trabajo 4)</h2>
+        <p className="text-zinc-600">Gráficas del documento “Trabajo 4” (galería completa)</p>
+      </div>
+      <div className="grid grid-cols-2 gap-4 md:grid-cols-3">
+        {powerBITrabajo4Images.map((src) => (
+          <button key={src} onClick={() => setOpenImg(src)} className="group overflow-hidden rounded-xl border bg-white p-2 transition hover:shadow">
+            <div className="relative w-full bg-zinc-50">
+              <img src={src} alt="Power BI Trabajo 4" className="w-full h-auto" />
+            </div>
+          </button>
+        ))}
+      </div>
+      <Modal isOpen={!!openImg} onClose={() => setOpenImg(null)} title="Power BI (Trabajo 4)">
+        {openImg && (
+          <div className="relative w-full bg-white">
+            <img src={openImg} alt="Power BI Trabajo 4" className="w-full h-auto" />
+          </div>
+        )}
+      </Modal>
+    </div>
+  );
+
   const comparativoContent = (
     <div className="space-y-6">
       <div className="text-center">
@@ -337,10 +372,410 @@ export default function Page() {
     </div>
   );
 
+  const entornosPanamaContent = (
+    <div className="space-y-8">
+      <div className="text-center">
+        <h2 className="mb-2 text-3xl font-bold text-zinc-800">Panamá: 5 entornos, 3 indicadores c/u</h2>
+        <p className="text-zinc-600">Contenido completo según “Trabajo 4 (1).docx”</p>
+      </div>
+
+      <Accordion title="Entorno Cultural (1)" defaultOpen={true} color="border-pink-200 bg-pink-50">
+        <div className="space-y-4">
+          <div>
+            <h3 className="mb-2 text-lg font-semibold text-zinc-800">Indicador 1: Dimensiones culturales de Hofstede y distancia cultural</h3>
+            <div className="overflow-x-auto">
+              <table className="min-w-full overflow-hidden rounded-xl border border-zinc-200 bg-white text-left">
+                <thead className="bg-pink-50">
+                  <tr>
+                    <th className="px-4 py-3 text-sm font-semibold text-zinc-700">Dimensión</th>
+                    <th className="px-4 py-3 text-sm font-semibold text-zinc-700">Puntuación (Panamá)</th>
+                    <th className="px-4 py-3 text-sm font-semibold text-zinc-700">Descripción Cultural</th>
+                  </tr>
+                </thead>
+                <tbody className="align-top">
+                  <tr className="border-t">
+                    <td className="px-4 py-3 text-zinc-800">Distancia de Poder (DdP)</td>
+                    <td className="px-4 py-3 text-zinc-800">95</td>
+                    <td className="px-4 py-3 text-zinc-700">Muy Alta: Sociedad jerárquica</td>
+                  </tr>
+                  <tr className="border-t">
+                    <td className="px-4 py-3 text-zinc-800">Individualismo (IDV)</td>
+                    <td className="px-4 py-3 text-zinc-800">11</td>
+                    <td className="px-4 py-3 text-zinc-700">Muy Baja: Sociedad colectivista</td>
+                  </tr>
+                  <tr className="border-t">
+                    <td className="px-4 py-3 text-zinc-800">Motivación hacia el Logro y el Éxito (MAS)</td>
+                    <td className="px-4 py-3 text-zinc-800">44</td>
+                    <td className="px-4 py-3 text-zinc-700">Baja/Media: Sociedad de Consenso</td>
+                  </tr>
+                  <tr className="border-t">
+                    <td className="px-4 py-3 text-zinc-800">Evitación de la Incertidumbre (UAI)</td>
+                    <td className="px-4 py-3 text-zinc-800">86</td>
+                    <td className="px-4 py-3 text-zinc-700">Muy Alta: Alta necesidad emocional de reglas</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <p className="mt-4">1.Distancia de Poder (DdP: 95): Con una puntuación muy alta, Panamá es una sociedad jerárquica. Las personas aceptan un orden jerárquico donde cada individuo tiene un lugar que no necesita justificación adicional. La jerarquía se percibe como un reflejo de las desigualdades inherentes. La centralización es popular, los subordinados esperan que se les diga qué hacer, y el jefe ideal es un autócrata benévolo.</p>
+            <p>2. Individualismo (IDV: 11): La puntuación muy baja clasifica a Panamá como una sociedad colectivista. Esto se manifiesta en un compromiso cercano y a largo plazo con el "grupo" (familiar, familia extendida o relaciones extendidas)</p>
+            <p>3. Motivación hacia el Logro y el Éxito (MAS: 44): Este puntaje caracteriza a Panamá como una sociedad de consenso relativo. El enfoque está en "trabajar para vivir". Los gerentes buscan el consenso, y las personas valoran la igualdad, la solidaridad y la calidad en su vida laboral. Los conflictos se resuelven mediante el compromiso y la negociación.</p>
+            <p>4. Evitación de la Incertidumbre (UAI: 86): La puntuación alta indica una alta preferencia por evitar la incertidumbre. Esto se manifiesta como una necesidad emocional de reglas estrictas, leyes y regulaciones para minimizar la incertidumbre, incluso si estas reglas no siempre parecen funcionar. Las sociedades con alta UAI mantienen códigos rígidos de comportamiento y son intolerantes con ideas poco ortodoxas. La precisión y la puntualidad son la norma, y la seguridad es un elemento importante en la motivación individual.</p>
+            <p>Distancia Cultural Panamá se encuentra entre las culturas más colectivistas del mundo, junto con Ecuador y Guatemala. Su alta Evitación de la Incertidumbre es un rasgo cultural que comparte con la mayoría de los países latinoamericanos que pertenecieron al reino español, como Argentina, Perú, y El Salvador.</p>
+            <p><strong>calificacion: 4</strong></p>
+            <p><strong>Referencia:</strong> The Culture Factor. Country comparison tool. https://www.theculturefactor.com/country-comparison-tool</p>
+          </div>
+          <div>
+            <h3 className="mb-2 text-lg font-semibold text-zinc-800">Indicador 2: Religión y valores culturales relevantes</h3>
+            <p>Panamá es un país con una fuerte tradición cristiana, especialmente católica, aunque con tendencias crecientes de pluralidad religiosa que reflejan cambios sociales y culturales.  Alrededor del 70 % de los panameños se identifica como católico, mientras que cerca del 19 % son protestantes “Evangelical / Protestant”, y aproximadamente el 7 % no están afiliados a ninguna religión formal o son “otros”, lo que señala una diversificación paulatina en la afiliación. Además, de acuerdo con estudios legales y de libertad religiosa, entre el 75 y 85 % de la población panameña se considera católica, y entre un 15 y 25 % se identifica como cristiano evangélico, según estimaciones basadas en encuestas y no en datos censales, dado que el Estado no recopila afiliación religiosa en sus censos. 
+En cuanto a minorías religiosas, hay presencia de grupos más pequeños como mormones, adventistas, Testigos de Jehová, así como comunidades de judíos, hindúes, budistas y musulmanes, junto con prácticas religiosas indígenas. Estas minorías reflejan la pluralidad cultural y étnica del país, especialmente en áreas con poblaciones indígenas o afrodescendientes, lo que añade complejidad a su paisaje religioso.
+Los valores culturales dominantes en Panamá influenciados por su mayoría católica tienden a valorar la familia, la tradición y la moral cristiana, pero está emergiendo un componente evangélico con impactos sociales algunas comunidades evangélicas promueven un compromiso activo con la política, la moral social y una religiosidad práctica. Además, la libertad de culto está garantizada en la constitución panameña, lo que favorece una convivencia relativamente pacífica entre diferentes credos y una diversidad religiosa creciente.
+En términos sociales, este fuerte núcleo cristiano influye en cómo se construyen las normas, valores sobre la familia, género, la vida comunitaria pero la tendencia hacia relaciones más diversas, junto con la presencia de religiones no cristianas y la no afiliación, apunta a una sociedad en transformación religiosa. Este cambio cultural abre oportunidades para actores institucionales y empresariales para dialogar con valores religiosos, ya sea para programas sociales, responsabilidad corporativa o iniciativas comunitarias, reconociendo tanto el peso de la tradición católica como el dinamismo de nuevas expresiones de fe.
+</p>
+            <img src="/trabajo4_1_assets/doc4_image8.jpg" alt="Religión y valores culturales relevantes" className="h-auto w-full" />
+            <p><strong>calificacion: 4</strong></p>
+            <p><strong>Referencias:</strong> Pew Research Center (2014); ICLRS; U.S. Dept. of State (2008); Catholics & Cultures.</p>
+          </div>
+          <div>
+            <h3 className="mb-2 text-lg font-semibold text-zinc-800">Indicador 3: Nivel de alfabetismo y educación</h3>
+            <p>Panamá ha logrado un nivel muy alto de alfabetización entre su población adulta, lo cual es un pilar fundamental para su desarrollo educativo y social,la tasa de alfabetización de adultos (mayores de 15 años) ha crecido desde alrededor del 88 % en 1980 hasta aproximadamente el 96,1 % en 2023. Esta cifra alta refleja avances sostenidos en acceso a la educación básica y en la capacidad lecto escritora de gran parte de la población panameña. Además, los datos de jóvenes de 15 a 24 años son aún más alentadores: la tasa de alfabetización juvenil en ese grupo llega al 98,88 % 2019
+Sin embargo, a pesar de que la alfabetización formal es muy alta, el problema del aprendizaje real es preocupante: un informe reciente indica que el “learning poverty” en Panamá es elevado es decir, un alto porcentaje de niños en edad primaria no logra un nivel mínimo de competencia lectora para su edad, lo que plantea un desafío para la calidad educativa, no solo para la cobertura.
+En cuanto a la estructura educativa,el promedio de años de escolaridad para la población mayor de 25 años en Panamá es de 9,04 años, lo cual sugiere que muchas personas completan la educación básica y algunos pasan a niveles secundarios, pero no todos alcanzan niveles superiores. Este dato también indica desigualdades: el análisis del Banco Mundial muestra que los niños indígenas abandonan la escuela más temprano, lo cual limita sus años de educación y su capacidad de alfabetización funcional a largo plazo. 
+Estos datos perfilan un panorama mixto: por un lado, Panamá ha consolidado un muy buen nivel de alfabetización formal, lo cual crea una base sólida para la educación y el desarrollo. Por otro lado, los retos persisten en calidad: la alta “learning poverty” indica que muchos estudiantes no alcanzan competencias esenciales, y la diferencia de logros según grupos poblacionales  sugiere que el progreso no es homogéneo. Para políticas públicas y empresas que dependan de capital humano. </p>
+<img src="/trabajo4_1_assets/doc4_image26.png" alt="Religión y valores culturales relevantes" className="h-auto w-full" />
+<p><strong>calificacion: 5  </strong></p>
+            <p><strong>Referencias:</strong> FRED; World Bank & UIS (2022) Learning Poverty; OECD (2017–2018) Multi-Dimensional Review of Panama.</p>
+          </div>
+        </div>
+      </Accordion>
+
+      <Accordion title="Entorno Político y Legal (2)" color="border-blue-200 bg-blue-50">
+        <div className="space-y-4">
+          <div>
+            <h3 className="mb-2 text-lg font-semibold text-zinc-800">Indicador 1: Regulaciones específicas del sector</h3>
+            <p>regulaciones específicas del sector : 
+iLa estabilidad macroeconómica de Panamá sustentada en la dolarización, un sector financiero sólido y su posición logística internacional contrasta con desafíos en su marco regulatorio sectorial. La literatura académica y los informes institucionales muestran que la regulación es formalmente robusta, pero su aplicación es desigual según el sector.
+En áreas como infraestructura, energía, transporte y minería, estudios sobre gobernanza señalan problemas recurrentes: discrecionalidad política, debilidad en la supervisión técnica y procesos de licitación susceptibles a presiones de grupos económicos. Estos factores incrementan el riesgo regulatorio, afectando la predictibilidad para inversionistas, aunque Panamá ha avanzado en transparencia y regulación financiera, aún persisten vacíos en la implementación y continuidad de las normas,sobre todo ante cambios gubernamentales.
+La investigación sobre gobernanza de megaproyectos en Panamá muestra cómo prácticas institucionales y culturales influyen en decisiones regulatorias, pudiendo generar retrasos, sobrecostos o modificaciones normativas. Por eso, para sectores regulados se recomienda combinar análisis jurídico detallado, evaluación del riesgo político y estrategias de mitigación social y contractual.
+Panamá ofrece oportunidades atractivas, pero la estabilidad depende del sector: donde la regulación es clara y tecnificada (finanzas, logística), el riesgo es bajo; en sectores con alta intervención estatal (infraestructura, energía), la incertidumbre regulatoria es mayor.
+</p>
+            <p><strong>Referencias:</strong> BTI 2024; IMF FSAP; World Bank (infraestructura); U.S. Dept. of State ICS; van Marrewijk (2016).</p>
+          </div>
+          <div>
+            <h3 className="mb-2 text-lg font-semibold text-zinc-800">Indicador 2: Índice de gobernanza mundial (WGI)</h3>
+            <p>Se muestra que Panamá mantiene un nivel de gobernanza moderado, ubicándose en una posición intermedia dentro de América Latina. El país sobresale en calidad regulatoria, lo que indica que sus normas para el funcionamiento de empresas y actividades económicas son relativamente claras y predecibles. Esto ha contribuido a que Panamá siga siendo atractivo para la inversión extranjera y para sectores como comercio, logística y servicios.
+Aun así, el WGI también evidencia áreas donde Panamá enfrenta retos importantes, especialmente en estado de derecho y control de la corrupción. Estos indicadores reflejan dificultades en la aplicación efectiva de las leyes, en la confianza ciudadana hacia las instituciones y en la percepción de integridad del sector público. Estos factores son determinantes porque influyen en la estabilidad institucional y en la evaluación del riesgo país.
+En cuanto a la estabilidad política y la voz y rendición de cuentas, Panamá muestra variaciones según cada periodo gubernamental. Si bien hay espacios de participación y cierta apertura institucional, continúan existiendo desafíos relacionados con transparencia y fortalecimiento democrático.
+Panamá posee bases sólidas en algunos ámbitos clave, pero necesita mejorar en las áreas institucionales críticas para consolidar un entorno más confiable, estable y competitivo tanto para los ciudadanos como para los inversionistas.
+</p>
+            <p><strong>Referencias:</strong> World Bank WGI; Country Data Report; IMF (2022) Country Report.</p>
+          </div>
+          <div>
+            <h3 className="mb-2 text-lg font-semibold text-zinc-800">Indicador 3: Índice de riesgo político</h3>
+            <p>El riesgo político en Panamá se considera moderado, influenciado principalmente por la calidad institucional y los niveles de confianza ciudadana en el Estado. Aunque el país mantiene un clima económico favorable y una tradición de apertura a la inversión extranjera, persisten debilidades que incrementan la percepción de riesgo para los inversionistas.
+La OCDE señala que Panamá presenta bajos niveles de confianza en el gobierno y en la transparencia de los procesos electorales, lo que refleja un desgaste institucional que puede afectar la estabilidad de políticas públicas a largo plazo. Asimismo, el Banco Mundial identifica riesgos sustanciales en gobernanza, especialmente en la coordinación interinstitucional y en la capacidad del Estado para ejecutar programas y reformas, lo que puede generar incertidumbre para proyectos privados.
+Estudios regionales evidencian problemas de captura institucional y limitada efectividad en el control de la corrupción, factores que pueden distorsionar la formulación de políticas y aumentar los costos para inversionistas no alineados con grupos de influencia. En conjunto, estos elementos muestran que, aunque Panamá posee fortalezas económicas, necesita fortalecer su institucionalidad para reducir su nivel de riesgo político.
+</p>
+<img src="/trabajo4_1_assets/doc4_image7.png" alt="Religión y valores culturales relevantes" className="h-auto w-full" />
+            
+            <p><strong>Referencias:</strong> OECD (2017); World Bank (2016) DPF; Dašić (2022); TheGlobalEconomy (Rule of Law).</p>
+          </div>
+        </div>
+      </Accordion>
+
+      <Accordion title="Entorno Tecnológico y Geoambiental (3)" color="border-green-200 bg-green-50">
+        <div className="space-y-4">
+          <div>
+            <h3 className="mb-2 text-lg font-semibold text-zinc-800">Indicador 1: Indicadores geográficos relevantes</h3>
+            <div className="grid gap-3 sm:grid-cols-3">
+              <button onClick={() => setOpenImg("/trabajo4_1_assets/doc4_image1.png")} className="overflow-hidden rounded-xl border bg-white p-2 hover:shadow">
+                <img src="/trabajo4_1_assets/doc4_image24.png" alt="Infraestructura Logística" className="h-auto w-full" />
+              </button>
+              <button onClick={() => setOpenImg("/trabajo4_1_assets/doc4_image2.png")} className="overflow-hidden rounded-xl border bg-white p-2 hover:shadow">
+                <img src="/trabajo4_1_assets/doc4_image22.png" alt="Riesgo Climático" className="h-auto w-full" />
+              </button>
+              <button onClick={() => setOpenImg("/trabajo4_1_assets/doc4_image3.png")} className="overflow-hidden rounded-xl border bg-white p-2 hover:shadow">
+                <img src="/trabajo4_1_assets/doc4_image23.png" alt="Ubicación/Tránsito" className="h-auto w-full" />
+              </button>
+            </div>
+            <p className="mt-3">La Ubicación Geográfica de Panamá es su mayor ventaja; es como un gran punto central de distribución gracias al Canal, que conecta rápidamente el Océano Pacífico con el Atlántico. Esta posición facilita el envío de la ropa deportiva a todos los mercados de América, lo que significa menos tiempo y dinero en transporte. Por esta razón, su impacto es muy bueno (Calificación 5) para nuestra estrategia de expansión regional. Además, esta ventaja se apoya en una sólida Infraestructura Logística, los puertos y servicios de aduana del país son de alta calidad (algo que confirma el índice LPI, que lo ubica entre los mejores 40 países). Esto asegura que la mercancía se mueva de manera rápida y confiable, garantizando que esta calificación también sea excelente (Calificación 5). Sin embargo, hay que tener cuidado con las Condiciones Geoambientales y el Clima, el clima tropical trae riesgos de sequías que han estado afectando el nivel de agua del Canal y lluvias fuertes que pueden causar inundaciones. El país no tiene un nivel alto de preparación contra estos riesgos (su ranking en el índice ND-GAIN es bajo). Este factor introduce un riesgo real de retrasos en la cadena de suministro, por lo que su calificación es un poco desfavorable (Calificación 3).</p>
+            <p><strong>Refencias:</strong> Banco Mundial. (2024). Logistics Performance Index: Overall (1=low to 5=high) - Panama; ND-GAIN (2023) Country Index; ACP (2024) Informe Anual.</p>
+          </div>
+          <div>
+            <h3 className="mb-2 text-lg font-semibold text-zinc-800">Indicador 2: Usuarios de internet y conectividad digital</h3>
+            <button onClick={() => setOpenImg("/trabajo4_1_assets/doc4_image2.png")} className="mb-3 block overflow-hidden rounded-xl border bg-white p-2 hover:shadow">
+              <img src="/trabajo4_1_assets/doc4_image2.png" alt="Conectividad digital Panamá" className="h-auto w-full" />
+            </button>
+            <button onClick={() => setOpenImg("/trabajo4_1_assets/doc4_image1.png")} className="mb-3 block overflow-hidden rounded-xl border bg-white p-2 hover:shadow">
+              <img src="/trabajo4_1_assets/doc4_image1.png" alt="Conectividad digital Panamá" className="h-auto w-full" />
+            </button>
+            <p>El Uso de Internet en la Población es sólido, ya que el 69% de las personas utiliza la red (dato oficial del Banco Mundial). Esto es Muy Favorable (Calificación 4), pues asegura que la mayoría de los habitantes son clientes potenciales para las ventas en línea y el marketing digital. Además, la Capacidad de la Red Móvil es Excelente (Calificación 5), ya que las cifras de la Unión Internacional de Telecomunicaciones (ITU) muestran que hay casi 97 suscripciones de Internet móvil activas por cada 100 habitantes. Esto es crucial, significa que los clientes están conectados todo el tiempo a través de sus celulares, lo que maximiza las oportunidades de que realicen compras inmediatas de nuestra ropa deportiva desde cualquier lugar. Finalmente, la Calidad de la conexión es también muy buena, con una velocidad promedio en el celular de alrededor de 41.83 Mbps (según Ookla). Este factor es Muy Favorable (Calificación 4)</p>
+            <p><strong>Refencias:</strong> World Bank (2023) IT.NET.USER.ZS; ITU (2022) Perfil Panamá; Ookla (2025) Speedtest Global Index.</p>
+          </div>
+          <div>
+            <h3 className="mb-2 text-lg font-semibold text-zinc-800">Indicador 3: Acceso a tecnología e innovación</h3>
+            <button onClick={() => setOpenImg("/trabajo4_1_assets/doc4_image17.png")} className="mb-3 block overflow-hidden rounded-xl border bg-white p-2 hover:shadow">
+              <img src="/trabajo4_1_assets/doc4_image17.png" alt="Innovación Panamá" className="h-auto w-full" />
+            </button>
+            <p>Panamá ha mostrado avances pero también limitaciones en su ecosistema de innovación y acceso a tecnología se ubica en el puesto 82/139, impulsado por su buena infraestructura y un sector creativo dinámico, aunque su capacidad de investigación aún es débil. En términos de inversión en I+D, los datos más recientes reportan que Panamá destina alrededor de 0,16 % de su PIB a investigación, un nivel bajo que limita el desarrollo de proyectos tecnológicos de mayor envergadura. También enfrenta un reto importante en propiedad intelectual: en 2021 solo hubo 35 solicitudes de patentes por residentes, según la OMPI, lo que refleja una actividad inventiva limitada o con dificultades para patentar. En cuanto a energía, el acceso a la electricidad es muy amplio: cerca del 97 % de la población tenía acceso en 2023, según datos del Banco Mundial. Esto favorece la posibilidad de adoptar tecnologías intensivas en energía, siempre que se fortalezca al mismo tiempo la capacidad de innovación local. A nivel institucional, Panamá ha expresado un compromiso claro con la innovación: el gobierno ha señalado la ciencia, la educación tecnológica y el emprendimiento como pilares de su estrategia para hacer la economía más competitiva. Panamá cuenta con una base energética sólida y escena creativa prometedora, pero para avanzar en innovación necesita aumentar su inversión en I+D, fomentar la cultura de patentes y fortalecer su capital humano y la colaboración entre universidades y empresas.</p>
+            <p><strong>Referencias:</strong> WIPO (2025) GII; WIPO IP Stats; The Global Economy (GII Index, Access to electricity); World Bank; CAF (2016).</p>
+          </div>
+        </div>
+      </Accordion>
+
+      <Accordion title="Entorno Comercio Internacional (4)" color="border-yellow-200 bg-yellow-50">
+        <div className="space-y-4">
+          <div>
+            <h3 className="mb-2 text-lg font-semibold text-zinc-800">Indicador 1: Instituciones de apoyo</h3>
+            <p>Panamá cuenta con una amplia red de instituciones que impulsan la internacionalización empresarial mediante programas de exportación, asesorías y servicios logísticos. ProPanamá, agencia del Gobierno Nacional, lidera la promoción de exportaciones y la atracción de inversión extranjera, brindando acompañamiento técnico a las empresas interesadas en ingresar a nuevos mercados. La Cámara de Comercio, Industrias y Agricultura de Panamá (CCIAP) y la Asociación Panameña de Exportadores (APEX) ofrecen capacitaciones, misiones comerciales y eventos empresariales que facilitan contactos internacionales. Además, la Zona Libre de Colón (ZLC) representa una plataforma clave para la distribución regional, otorgando beneficios fiscales y logísticos. El Ministerio de Comercio e Industrias (MICI) y la Autoridad Nacional de Aduanas (ANA) garantizan el cumplimiento normativo y los procedimientos de exportación, mientras que la Cámara Panameña de Comercio Electrónico (CAPACE) fomenta la digitalización y el comercio electrónico, aspecto esencial para una marca de ropa deportiva con proyección global.</p>
+            <p><strong>Calificación:</strong> 5</p>
+            <p><strong>Referencias:</strong> APEX (2024); CCIAP (2024); CAPACE (2024); MICI (2024); ProPanamá (2024); ANA (2024); ZLC (2024).</p>
+          </div>
+          <div>
+            <h3 className="mb-2 text-lg font-semibold text-zinc-800">Indicador 2: Evolución balanza comercial Colombia–Panamá</h3>
+            <button onClick={() => setOpenImg("/trabajo4_1_assets/doc4_image25.png")} className="mb-3 block overflow-hidden rounded-xl border bg-white p-2 hover:shadow">
+              <img src="/trabajo4_1_assets/doc4_image25.png" alt="Balanza comercial PAN-COL" className="h-auto w-full" />
+            </button>
+            <p>La balanza comercial entre Colombia y Panamá es altamente favorable para Colombia, lo que se conoce como superávit comercial. Esto significa que Colombia le vende (exporta) a Panamá mucho más de lo que le compra (importa). Por ejemplo, en 2023, las exportaciones colombianas alcanzaron un valor de 4.166 millones de dólares hacia Panamá. Aunque la mayor parte de este valor proviene de productos grandes como el petróleo crudo y los minerales, el hecho de que Panamá sea un mercado que ya compra tanto a Colombia es una gran ventaja para nuestra empresa de ropa deportiva. Este superávit sostenido confirma dos cosas importantes para la estrategia de internacionalización. La primera es la cercanía y el fuerte flujo comercial establecido facilitan la distribución y ayudan a reducir los tiempos de envío y la complejidad de los trámites. Esto se traduce en costos logísticos más bajos para nuestra empresa y la segunda es que el mercado panameño es un receptor natural de bienes colombianos. La estrategia de la empresa se beneficia de que los consumidores panameños están familiarizados y confían en la calidad de los productos de origen colombiano, lo que minimiza el riesgo de entrada en el mercado.</p>
+            <p><strong>Calificación:</strong> 4</p>
+            <p><strong>Referencia:</strong> OEC – Panamá (PAN) y Colombia (COL): comercio bilateral.</p>
+          </div>
+          <div>
+            <h3 className="mb-2 text-lg font-semibold text-zinc-800">Indicador 3: Desempeño logístico y ruta de exportación</h3>
+            <button onClick={() => setOpenImg("/trabajo4_1_assets/doc4_image11.png")} className="mb-3 block overflow-hidden rounded-xl border bg-white p-2 hover:shadow">
+              <img src="/trabajo4_1_assets/doc4_image11.png" alt="Desempeño logístico y ruta" className="h-auto w-full" />
+            </button><button onClick={() => setOpenImg("/trabajo4_1_assets/doc4_image20.png")} className="mb-3 block overflow-hidden rounded-xl border bg-white p-2 hover:shadow">
+              <img src="/trabajo4_1_assets/doc4_image20.png" alt="Desempeño logístico y ruta" className="h-auto w-full" />
+            </button>
+            <p>El Índice de Desempeño Logístico (LPI) es una medida del Banco Mundial que evalúa qué tan fácil, rápido y eficiente es mover mercancías a través de las aduanas y la infraestructura de un país. En la última medición disponible (Informe 2023, con datos de 2022), Panamá obtuvo un puntaje de 3.10 en una escala de 1 a 5, lo cual lo sitúa en la posición global 57. Aunque el ranking global ha descendido ligeramente respecto a años anteriores (en 2018 estaba en la posición 38), el puntaje de 3.10 sigue siendo una señal fuerte de que el país tiene una logística confiable. Este alto desempeño se basa en su infraestructura marítima, centrada en el famoso Canal de Panamá y sus puertos clave como Balboa (en el lado Pacífico) y Manzanillo (en el lado Atlántico). Esta red garantiza alta puntualidad y facilita la gestión de aduanas. Para una empresa de ropa deportiva, un LPI tan sólido es altamente favorable, pues minimiza los riesgos de retraso en la llegada de colecciones y mantiene bajos los costos logísticos, asegurando que el producto colombiano sea competitivo en el mercado panameño.</p>
+            <p><strong>Calificación:</strong> 5</p>
+            <p><strong>Referencias:</strong> The World Bank Group – LPI (home y serie LP.LPI.OVRL.XQ).</p>
+          </div>
+        </div>
+      </Accordion>
+
+      <Accordion title="Entorno Inversión Extranjera Directa (5)" color="border-purple-200 bg-purple-50">
+        <div className="space-y-4">
+          <div>
+            <h3 className="mb-2 text-lg font-semibold text-zinc-800">Indicador 1: Flujos de IED entre Colombia y Panamá</h3>
+            <p>l flujo de inversión se refiere al movimiento de capital entre países, y en este caso se mide por la Inversión Extranjera Directa (IED), que muestra cuánto dinero llega de inversionistas extranjeros para abrir empresas, expandirse o apoyar actividades productivas.
+Las gráficas del Banco Mundial muestran el comportamiento de la inversión extranjera directa como porcentaje del PIB en Panamá y Colombia. En Panamá, la IED cayó fuertemente en 2020 (pandemia) y en los últimos años se mantiene relativamente estable, con pequeñas variaciones, lo que indica que el país sigue siendo atractivo para los inversionistas internacionales. Este comportamiento refleja estabilidad económica y confianza en el mercado panameño, especialmente por su ubicación estratégica, el Canal y su papel como centro logístico. Esto es muy positivo porque demuestra que Panamá recibe capital extranjero de manera constante y mantiene un entorno favorable para nuevas empresas. En Colombia, la IED también ha mostrado cambios, con algunos años de aumento y otros de disminución. Aunque existe variabilidad, los datos muestran que el país sigue recibiendo inversión extranjera, lo cual demuestra que sigue siendo un mercado activo y con oportunidades. Para una marca de ropa deportiva que quiere internacionalizarse en Panamá, estos indicadores son importantes. La estabilidad de la IED en Panamá muestra que es un país seguro para invertir, abrir tiendas, distribuir productos o crear alianzas comerciales. En general, los datos respaldan que Panamá es un buen destino para expandir la marca.
+</p>
+            <p><strong>Calificación:</strong> 4</p>
+            <p><strong>Referencias:</strong> FocusEconomics; World Bank IED inflows PAN/CO.</p>
+          </div>
+          <div>
+            <h3 className="mb-2 text-lg font-semibold text-zinc-800">Indicador 2: Sectores receptores de inversión</h3>
+            <img src="/trabajo4_1_assets/doc4_image16.png" alt="Desempeño logístico y ruta" className="h-auto w-full" />
+            <p>Los incentivos a la inversión en Panamá combinan regímenes fiscales (zonas francas, Panamá Pacífico, exenciones tributarias), regímenes legales puntuales (Ley No. 41 para Sedes de Empresas Multinacionales) y servicios de promoción (PROPANAMA, PROINVEX) que facilitan la llegada y operación de empresas extranjeras. Estos incentivos reducen costos fiscales y aduaneros, agilizan trámites y ofrecen estabilidad legal para sedes regionales; además, la existencia de hubs logísticos (Zona Libre de Colón, Panamá Pacífico) mejora la eficiencia operativa. Para una estrategia de internacionalización, estos apoyos son altamente favorables, porque disminuyen la barrera de entrada, favorecen la estructura de costos y facilitan la logística regional, incrementando la probabilidad de éxito y la rapidez de implantación. Sin embargo, se requiere cumplimiento regulatorio y asesoría local para maximizar beneficios y evitar riesgos fiscales o de cumplimiento</p>
+            <p><strong>Calificación:</strong> 5</p>
+            <p><strong>Fuente:</strong> INEC – Balanza de pagos.</p>
+          </div>
+          <div>
+            <h3 className="mb-2 text-lg font-semibold text-zinc-800">Indicador 3: Incentivos a la inversión y promoción</h3>
+            <p>Regímenes fiscales (zonas francas, Panamá Pacífico), Ley 41 (SEM), servicios de promoción (PROPANAMA, PROINVEX). Reducen costos y agilizan trámites.</p>
+            <p><strong>Calificación:</strong> 5</p>
+            <p><strong>Referencias:</strong> ProPanamá; MICI PROINVEX; Panamá Pacífico; ZLC; Ley 41; DGI.</p>
+          </div>
+        </div>
+      </Accordion>
+    </div>
+  );
+
+  const entornosChileContent = (
+    <div className="space-y-8">
+      <div className="text-center">
+        <h2 className="mb-2 text-3xl font-bold text-zinc-800">Chile: 5 entornos, 3 indicadores c/u</h2>
+        <p className="text-zinc-600">Contenido completo según “Trabajo 4 (1).docx”</p>
+      </div>
+
+      <Accordion title="Entorno Cultural (1)" defaultOpen={true} color="border-pink-200 bg-pink-50">
+        <div className="space-y-4">
+          <div>
+            <h3 className="mb-2 text-lg font-semibold text-zinc-800">Indicador 1: Dimensiones de Hofstede</h3>
+            <p>Dimensión
+Puntuación (Chile)
+Distancia de poder
+63
+Individualismo
+49
+Motivación hacia el logro y el éxito
+28
+Evitación de la incertidumbre
+86
+
+ 
+Distancia de poder (63): indica una aceptación moderada – alta de las jerarquías. Las organizaciones normalmente funcionan con estructuras claras y la autoridad es respetada, además las decisiones importantes vienen de niveles superiores. Para una empresa que busca chile como opción de internacionalización esto implica adaptar los estilos de liderazgo, formalidad, claridad en los roles y procesos bien establecidos, la comunicación debe ser ordenada. Ignorar este factor cultural puede generar roces entre empleados o socios, tomarla en cuenta facilita la toma de decisiones en el mercado chileno.
+ 
+Individualismo (49): Chile tiene un nivel medio – bajo de individualismo. Esto significa que existe un equilibrio entre el valor individual y el grupal. Las relaciones de confianza y las redes sociales siguen siendo importantes, pero no tanto como en culturas altamente colectivistas. Para una empresa que tenga a Chile en mente para internacionalizarse, esto requiere la construcción de vínculos con socios locales. Los equipos prefieren ambientes colaborativos donde se escuche a todos y haya un sentido de comunidad.
+ 
+Motivación hacia el logro y el éxito (28): Chile es una cultura donde predomina el género femenino, por lo cual las personas priorizan la cooperación y el bienestar colectivo que la competencia agresiva o el éxito material. A esto se le agrega que los chilenos tienen un comportamiento modesto. Esto implica que el liderazgo vaya más orientado a los consensos, ser cercanos y empáticos. Los consumidores pueden reaccionar mejor a mensajes que destaquen beneficios sociales. Las dinámicas sociales favorecen la colaboración y no tanto la competencia interna
+ 
+Evitación de la incertidumbre (86): En esta dimensión Chile tiene un nivel muy alto. La sociedad prefiere reglas claras, procesos formales y bajo riesgo en los trámites. Para las empresas extranjeras este es uno de los puntos mas importantes a tomar en cuenta, el mercado chileno exige contratos detallados, cumplimiento riguroso de las normas y comunicación clara. Por lo tanto, los consumidores también prefieren marcas confiables que se muestren cercanas, no adaptarse a este rasgo puede generar desconfianza e incertidumbre en el mercado chileno.
+</p>
+            <p><strong>Referencia:</strong> The Culture Factor (comparador Chile).</p>
+          </div>
+          <div>
+            <h3 className="mb-2 text-lg font-semibold text-zinc-800">Indicador 2: Idioma y comunicación empresarial</h3>
+            <p>Idioma predominante y su relación con la comunicación empresarial. WB
+ 
+ El idioma oficial de Chile es el español, con unas variantes locales como en la mayoría de los países latinoamericanos. Aunque se usa el mismo idioma que en la gran mayoría de países latinoamericanos, existen diferencias que pueden afectar la comunicación empresarial, especialmente en negociaciones, campañas de marketing o capacitaciones de equipos de trabajo. Aunque el español brinda una base solida para la comunicación, es clave que se eviten las suposiciones y se realice un estudio del lenguaje para asegurar la claridad y cercanía con el público chileno. Esta adaptación minimiza los errores de interpretación, mejora la confianza y fortalece la confianza con socios y consumidores locales.
+ </p>
+            <p><strong>Calificación:</strong> 2/5</p>
+          </div>
+          <div>
+            <h3 className="mb-2 text-lg font-semibold text-zinc-800">Indicador 3: Indicadores demográficos</h3>
+            <p>Chile presenta una edad media de 36,6 años, lo que refleja una población adulta con poder adquisitivo estable y preferencias de consumo algo más maduras. Su crecimiento poblacional es del 0,4 % por lo que la expansión del mercado depende de ganar participación mas que lo que depende de un aumento natural de habitantes. Además, chile es un país altamente urbanizado con el 88% de la población viviendo en zonas urbanas, lo que facilita de gran manera la distribución, logística y acceso a los consumidores por los canales modernos. Para una empresa colombiana, este escenario demográfico implica un mercado concentrado, adulto urbano con oportunidades crecientes en servicios de calidad de vida y bienestar.</p>
+            <img src="/trabajo4_1_assets/doc4_image15.png" alt="Desempeño logístico y ruta" className="h-auto w-full" /><img src="/trabajo4_1_assets/doc4_image16.png" alt="Desempeño logístico y ruta" className="h-auto w-full" />
+            <img src="/trabajo4_1_assets/doc4_image21.png" alt="Desempeño logístico y ruta" className="h-auto w-full" />
+            <img src="/trabajo4_1_assets/doc4_image10.png" alt="Desempeño logístico y ruta" className="h-auto w-full" />
+            <p><strong>Calificación:</strong> 4/5</p>
+            <p><strong>Referencias:</strong> World Bank (URB, POP.GROW); Statista (average age).</p>
+          </div>
+        </div>
+      </Accordion>
+
+      <Accordion title="Entorno Político y Legal (2)" color="border-blue-200 bg-blue-50">
+        <div className="space-y-4">
+          <div>
+            <h3 className="mb-2 text-lg font-semibold text-zinc-800">Indicador 1: WGI</h3>
+            <p>Este indicador muestra qué tan bien está manejado un país. Revisa si el gobierno es estable, si las leyes se cumplen, si hay control frente a la corrupción y si las instituciones funcionan correctamente. En Chile, estos resultados suelen ser buenos comparados con otros países de la región. Esto significa que el país es organizado y tiene reglas claras. Para una empresa que quiere entrar al mercado chileno, esto es útil porque disminuye riesgos, da más seguridad para invertir y permite trabajar sin tanta incertidumbre. </p>
+            <p><strong>Calificación:</strong> 5</p>
+          </div>
+          <div>
+            <h3 className="mb-2 text-lg font-semibold text-zinc-800">Indicador 2: Propiedad Intelectual</h3>
+            <p>Este indicador mide qué tan bien un país protege las marcas, diseños y productos que crean las empresas. Chile cuenta con leyes claras que castigan las copias y el uso ilegal de marcas. Esto es una ventaja para una empresa extranjera, porque puede registrar su marca y estar tranquila de que no será imitada fácilmente. Además, ayuda a que el valor del producto se mantenga y a que los consumidores confíen más en lo que compran. </p>
+            <p><strong>Calificación:</strong> 4</p>
+          </div>
+          <div>
+            <h3 className="mb-2 text-lg font-semibold text-zinc-800">Indicador 3: Regulaciones específicas del sector</h3>
+            <p>Este indicador se refiere a las normas que aplican directamente al sector donde trabaja la empresa. En el caso de ropa o accesorios, incluye reglas sobre importación, etiquetas, materiales permitidos y protección al consumidor. En Chile, estas normas son claras y están bien establecidas. Cumplirlas puede exigir algunos ajustes, pero también ayuda a evitar problemas legales y permite que los productos se vendan sin inconvenientes en el país. Esto hace más fácil la entrada de una marca extranjera al mercado. </p>
+            <p>
+indicador 
+Explicación general 
+Impacto en chile y en la internacionalización  
+Impacto (1-5) 
+Índice de Gobernanza Mundial (WGI) 
+ 
+Mide qué tan bien está manejado un país: si el gobierno es estable, si las leyes se cumplen y si las instituciones funcionan bien. 
+ 
+Chile suele tener buenos resultados, lo que muestra un país organizado y con reglas claras. Esto ayuda a que una empresa extranjera entre al mercado con menos riesgos y más seguridad al invertir. 
+ 
+       5 
+Índice de Propiedad Intelectual 
+ 
+Evalúa qué tan bien se protegen las marcas, diseños y productos creados por las empresas. 
+ 
+Chile tiene leyes claras que castigan las copias o el uso ilegal de marcas. Esto protege a las empresas nuevas y permite vender sin temor a imitaciones, lo que ayuda a la internacionalización. 
+ 
+ 
+      4 
+Regulaciones específicas del sector 
+ 
+Son las normas que aplican directamente al tipo de productos de la empresa, como reglas de importación, etiquetas, materiales y calidad. 
+ 
+En Chile estas reglas están bien definidas. Aunque requieren ciertos ajustes, dan seguridad legal y permiten vender los productos sin tantos problemas, facilitando la entrada al mercado. 
+ 
+       4 
+
+</p>
+<img src="/trabajo4_1_assets/doc4_image5.jpg" alt="Desempeño logístico y ruta" className="h-auto w-full" />
+<img src="/trabajo4_1_assets/doc4_image6.jpg" alt="Desempeño logístico y ruta" className="h-auto w-full" />
+            <p><strong>Calificación:</strong> 4</p>
+            <p><strong>Referencias:</strong> World Bank WGI; Statista; Ministerio de Economía; InvestChile.</p>
+          </div>
+        </div>
+      </Accordion>
+
+      <Accordion title="Entorno Tecnológico y Geoambiental (3)" color="border-green-200 bg-green-50">
+        <div className="space-y-4">
+          <div>
+            <h3 className="mb-2 text-lg font-semibold text-zinc-800">Indicador 1: Geografía y clima</h3>
+            <p>Chile se encuentra en el extremo sur de América del sur, tiene una amplia costa sobre el océano Pacífico. Esta ubicación facilita el comercio internacional, especialmente para sectores que dependen de la logística marítima. Para una empresa colombiana esto permite integrar mercados de exportación, aprovechar tratados comerciales y conectar los productos con centros de logística eficientes. Chile presenta una diversidad climática grande, desierto en la parte del norte, clima mediterráneo en el centro y temperaturas frías en el sur. Esto afecta costos logísticos, uso energético y la estacionalidad de los productos, especialmente en sectores como los alimentos o el transporte. Conocer esto permite ajustar rutas, empaques y tiempos de entrega según la región. Aunque esto presenta un reto también abre oportunidades para adaptar los productos a necesidades de distintas regiones.</p>
+            <p><strong>Calificación:</strong> 4/5</p>
+          </div>
+          <div>
+            <h3 className="mb-2 text-lg font-semibold text-zinc-800">Indicador 2: Conectividad digital</h3>
+            <p>Chile ha mantenido un crecimiento sostenido en los ultimo 30 años de usuarios con acceso a internet alcanzando un 94% de la población en 2023, esto lo hace uno de los mas conectados en américa latina. El alto nivel de acceso refleja la buena infraestructura tecnológica el país además de una amplia disponibilidad de servicios y la rápida adopción de las herramientas digitales por parte de la población. Para una empresa colombiana, el panorama es muy favorable ya que el alto nivel de conectividad permite que se hagan campañas de marketing digital, estrategias de comercio electrónico, automatización de procesos logísticos y canales digitales de servicio al cliente. El uso masivo del internet en el país da como resultado, usuarios que están bien informados y que van a esperar, rapidez, confianza y buen manejo de los canales digitales por parte de las empresas. Chile es óptimo para la operación digital de una empresa y la comunicación de esta soportada en herramientas digitales</p>
+            <p><strong>Referencia:</strong> World Bank (IT.NET.USER.ZS)</p>
+            <p><strong>Calificación:</strong> 5/5</p>
+            <button onClick={() => setOpenImg("/trabajo4_1_assets/doc4_image14.png")} className="mb-3 block overflow-hidden rounded-xl border bg-white p-2 hover:shadow">
+              <img src="/trabajo4_1_assets/doc4_image14.png" alt="Conectividad Chile" className="h-auto w-full" />
+            </button>
+          </div>
+          <div>
+            <h3 className="mb-2 text-lg font-semibold text-zinc-800">Indicador 3: Acceso a tecnología e innovación</h3>
+            <p>Chile presenta un acceso amplio a tecnología gracias a su alta conectividad y tasa de acceso a internet. El país destaca por su amplia cobertura de internet fijo y móvil, su penetración de fibra óptica es una de las más altas de Latinoamérica. Además, tiene un ecosistema de startups apoyado por Start-up chile lo cual permite la </p>
+            <p>diversificación del mercado permitiendo la entrada de empresas emergentes brindándoles apoyo monetario. Para una empresa colombiana este entorno facilita la integración digital, el comercio electrónico y la automatización.</p>
+            <p><strong>Calificación:</strong> 4/5</p>
+          </div>
+        </div>
+      </Accordion>
+
+      <Accordion title="Entorno Comercio Internacional (4)" color="border-yellow-200 bg-yellow-50">
+        <div className="space-y-4">
+          <div>
+            <h3 className="mb-2 text-lg font-semibold text-zinc-800">Indicador 1: Acuerdos comerciales</h3>
+            <p>Colombia y chile tienen un comercio basado en el tratado de libre comercio que está vigente desde el año 2009 lo cual eliminó casi el 100% de los aranceles y abrió por completo el comercio de bienes y servicios entre los 2 países. Este acuerdo incluye varios parámetros que brindan seguridad jurídica a empresas colombianas que deseen entrar al mercado de Chile. Además de esto, con el fin de agilizar las operaciones de exportación e importación y facilitar los procesos Colombia y chile acordaron emitir, enviar y recibir los certificados de origen lo cual se hará digitalmente.</p>
+            <button onClick={() => setOpenImg("/trabajo4_1_assets/doc4_image13.png")} className="mb-3 block overflow-hidden rounded-xl border bg-white p-2 hover:shadow">
+              <img src="/trabajo4_1_assets/doc4_image13.png" alt="Acuerdos comerciales COL-CL" className="h-auto w-full" />
+            </button>
+            <p><strong>Calificación:</strong> 5/5</p>
+            <p><strong>Referencias:</strong> Gobierno de Chile – Relación bilateral; MinCIT – Seguimiento TLC.</p>
+          </div>
+          <div>
+            <h3 className="mb-2 text-lg font-semibold text-zinc-800">Indicador 2: Desempeño logístico y ruta</h3>
+            <button onClick={() => setOpenImg("/trabajo4_1_assets/doc4_image13.png")} className="mb-3 block overflow-hidden rounded-xl border bg-white p-2 hover:shadow">
+              <img src="/trabajo4_1_assets/doc4_image4.png" alt="LPI Chile y ruta" className="h-auto w-full" />
+            </button>
+            <p>El LPI (índice de desempeño logístico) de chile es de 3 y su posición es la número 61, esto muestra que el país cuenta con capacidades logísticas aceptables, pero tiene un margen muy amplio para la mejora. Chile destaca en Sudamérica por su infraestructura sólida, en especial sus puertos que facilitan el comercio exterior. La ruta Colombia – Chile es eficiente gracias a la conexión directa por el océano pacífico. El puerto de Buenaventura en el pacífico colombiano permiten una salida estratégica hacia chile puertos de Valparaíso y San Antonio que mantienen infraestructura sólida y disposición para recibir altos volúmenes de carga. Los tiempos de tránsito marítimo son competitivos (8 – 12 días) lo que favorece operaciones estables para Colombia.</p>
+            <p><strong>Calificación:</strong> 5/5</p>
+            <p><strong>Referencia:</strong> World Bank – International LPI.</p>
+          </div>
+          <div>
+            <h3 className="mb-2 text-lg font-semibold text-zinc-800">Indicador 3: Instituciones de apoyo</h3>
+            
+            <p>Ambos países (chile y Colombia) cuentan con instituciones que apoyan la internacionalización empresarial. Procolombia brinda estudios de mercado, asesoría exportadora y conexión con compradores chilenos, mientras que prochile ofrece información comercial y de apoyo en promoción. La cámara de comercio colombo chilena facilita asesorías legales y contacto con socios locales. InvestChile es un organismo público que promueve Chile como destino de inversión extranjera directa en el mercado global, conectando los intereses de los inversionistas extranjeros con las oportunidades de negocio que Chile brinda. Además, instituciones colombianas como ANDI y Bancóldex ofrecen capacitación en comercio exterior y financiamiento para internacionalización.</p>
+            <p><strong>Calificación:</strong> 5/5</p>
+            <p><strong>Referencias:</strong> Cámara de Comercio Colombo-Chilena; InvestChile; ProChile.</p>
+          </div>
+        </div>
+      </Accordion>
+
+      <Accordion title="Entorno Inversión Extranjera (5)" color="border-purple-200 bg-purple-50">
+        <div className="space-y-4">
+          <div>
+            <h3 className="mb-2 text-lg font-semibold text-zinc-800">Indicador 1: Flujos de inversión COL–Chile</h3>
+            <button onClick={() => setOpenImg("/trabajo4_1_assets/doc4_image12.png")} className="mb-3 block overflow-hidden rounded-xl border bg-white p-2 hover:shadow">
+              <img src="/trabajo4_1_assets/doc4_image12.png" alt="Flujos IED COL-CL" className="h-auto w-full" />
+            </button>
+            <p>Este indicador muestra cuánto dinero se mueve en inversión entre Colombia y Chile. En los últimos años, estos flujos han sido estables y han crecido en sectores como comercio, servicios y manufactura. Esto significa que existe una relación económica sólida entre ambos países, lo que reduce riesgos para una empresa colombiana como Babalu. La estabilidad en la inversión ayuda a que los trámites sean más claros, las reglas más conocidas y la entrada al mercado más predecible. Para Babalu, esto es positivo porque facilita abrir tiendas, formar alianzas con distribuidores y tener un proceso de expansión más seguro.</p>
+            <p><strong>calificación:</strong> 4/5</p>
+          </div>
+          <div>
+            <h3 className="mb-2 text-lg font-semibold text-zinc-800">Indicador 2: Sectores receptores de IED</h3>
+            
+            <p>Este indicador muestra qué sectores en Chile reciben más inversión extranjera. Los más fuertes son comercio, servicios, energía, tecnología y manufactura. Esto beneficia a Babalu porque el comercio minorista y el mercado de ropa deportiva están dentro de los sectores activos donde más inversión entra. Cuando un país recibe mucha inversión en un sector, es una señal de crecimiento, estabilidad y oportunidades. Esto significa que Babalu podría entrar a un mercado dinámico, con consumidores acostumbrados a nuevas marcas y con posibilidades de abrir tiendas o vender por canales digitales.</p>
+            <p><strong>Calificación:</strong> 4/5</p>
+          </div>
+          <div>
+            <h3 className="mb-2 text-lg font-semibold text-zinc-800">Indicador 3: Incentivos y entidades de promoción</h3>
+            
+            <p>Este indicador muestra los apoyos que Chile ofrece para atraer empresas extranjeras. “InvestChile” es la entidad principal y brinda asesoría gratuita, información legal, datos del mercado y acompañamiento para todo el proceso de entrada al país. Chile también ofrece impuestos competitivos, trámites simples y apertura comercial. Para Babalu, esto hace más fácil y barato internacionalizarse, porque tiene acceso a apoyo directo para registrarse, entender el mercado, cumplir con normas y encontrar socios locales. Estos incentivos reducen el riesgo y aceleran la expansión.</p>
+            <p><strong>Calificación:</strong> 5/5</p>
+            <p><strong>Referencias:</strong> InvestChile (2024); Banco Central; Ministerio de Economía.</p>
+          </div>
+        </div>
+      </Accordion>
+    </div>
+  );
+
   const tabs = [
     { key: "panama", label: "Panamá", content: panamaContent },
     { key: "chile", label: "Chile", content: chileContent },
+    { key: "entornos_pa", label: "Entornos Panamá", content: entornosPanamaContent },
+    { key: "entornos_cl", label: "Entornos Chile", content: entornosChileContent },
     { key: "powerbi", label: "Power BI", content: powerBIContent },
+    { key: "powerbi_t4", label: "Power BI (T4)", content: powerBITrabajo4Content },
     { key: "comparativo", label: "Cuadro comparativo", content: comparativoContent },
   ];
 
