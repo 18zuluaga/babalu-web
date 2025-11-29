@@ -922,6 +922,204 @@ export default function Page() {
     </div>
   );
 
+  const panamaInternacionalizacionContent = (
+    <div className="space-y-8">
+      <div className="text-center">
+        <h2 className="mb-2 text-3xl font-bold text-zinc-800">Panamá internacionalización</h2>
+        <p className="text-zinc-600">Contenido íntegro del documento grupal (sin resumir)</p>
+      </div>
+
+      <Accordion title="1. País seleccionado: Panamá" defaultOpen={true} color="border-pink-200 bg-pink-50">
+        <div className="space-y-4">
+          <p>Panamá es, sin duda, la mejor opción para que nuestra marca de ropa deportiva crezca a nivel internacional porque combina una ubicación perfecta con una economía sin tantos riesgos.Su ubicación y Negocios (Entorno Logístico y Comercial), Panamá funciona como un gran hub logístico y distribución para toda América. Gracias al Canal de Panamá y a la Zona Libre de Colón, es muy fácil y rápido enviar nuestros productos a cualquier país de la región. La infraestructura es tan buena que el país tiene un alto Índice de Desempeño Logístico, lo que confirma que el transporte es eficiente. Además, el comercio es el motor principal de su economía, lo que nos da la seguridad de que hay canales de distribución establecidos y funcionando perfectamente para vender nuestra ropa. También su entorno Económico y Financiero, nos brinda seguridad ya que Panamá usa el dólar estadounidense como moneda, lo que significa que el tipo de cambio está fijo (1 Balboa es siempre 1 Dólar). Esto es una ventaja enorme porque elimina la preocupación de que el dinero se devalúe. Podemos planificar nuestros costos y ganancias a largo plazo con total confianza. Además, la mayoría del dinero extranjero que entra al país (el 65.6% de la Inversión Extranjera Directa) va al sector comercial, lo cual es una señal clara de que nuestra estrategia de venta es la correcta. El entorno Político y Legal demuestra que el ambiente es favorable para hacer negocios. El país tiene buenas regulaciones comerciales y ofrece mucho apoyo a las empresas extranjeras a través de entidades como (ProPanamá, CCIAP). Desde el punto de vista tecnológico, Panamá está muy bien conectado. Casi todos tienen acceso a la red móvil (97 de cada 100 personas), lo que es excelente para vender por internet (e-commerce) y hacer publicidad digital. A nivel cultural, la gente valora mucho las comunidades y la lealtad (Colectivismo), por lo que una marca que fomente el sentido de pertenencia y comunidad será bien recibida. También valoran mucho la formalidad y la confianza (Evitación de la Incertidumbre), algo que se logra al usar una plataforma logística y legal tan robusta como la panameña. Con todo esto podemos observar que Panamá ofrece menores barreras de entrada, una logística más eficiente, un entorno financiero estable gracias a la dolarización y un mercado más receptivo para marcas colombianas.</p>
+        </div>
+      </Accordion>
+
+      <Accordion title="2. Estrategias de internacionalización y modos de entrada" defaultOpen={false} color="border-blue-200 bg-blue-50">
+        <div className="space-y-4">
+          <p>La forma de entrada más acertada para Babalú en Panamá es una combinación de exportación directa y una alianza con un distribuidor panameño, ya que esto permite entrar rápido al mercado, con bajo riesgo y aprovechando la infraestructura logística del país. La exportación directa desde Colombia a Panamá facilita enviar facilita el envío de inventario, reduciendo los costos y tiempos. Al mismo tiempo una alianza comercial estratégica con un distribuidor de panamá permitirá acceder a tiendas deportivas, malls y puntos multimarca donde marcas globales están posicionadas. Esto se puede complementar con un e-commerce o tienda online propia que permite probar la demanda y rotar inventario con rapidez, dado que la moda es una de las categorías con mayor crecimiento en ventas digitales del país, este planteamiento reduce los costos de entrada, facilita el manejo logístico, permite evaluar el nivel de aceptación de la marca y la visibilidad de la marca ya partir de eso crear un diagnóstico inicial y con esto hacer un posicionamiento sólido inicialmente.</p>
+          <p>Esta combinación es la más adecuada para entrar a Panamá ya que es un país que ofrece un entorno logístico altamente efectivo y favorable que reduce tiempos y costos de importación, lo que permite mover inventario con rapidez sin crear operaciones propias desde el principio. Además, Panamá es un mercado competitivo dominado por marcas internacionales que ya están consolidadas, por lo que apoyarse en un distribuidor con presencia en marcas deportivas facilita ganar visibilidad sin negociar desde cero. Este contexto que incluye alta competitividad, infraestructura logística competente y consumidores digitales, hace que una entrada gradual y de bajo riesgo sea la opción más estratégica antes de considerar inversiones en franquicias o tiendas propias.</p>
+          <p>La entrada mediante explotación directa y alianza estratégica con distribuidor implica que la empresa maneja una operación más ligera, ya que no necesita abrir una sede en Panamá para abastecer, y lo puede hacer desde Colombia. Logísticamente la empresa debe coordinar inventarios, tiempos de entrega, reposición con su distribuidor y además definir un sistema eficiente para devoluciones y pedidos del e-commerce. Lo que exige un flujo de comunicación constante y una planificación precisa de la demanda. En cuanto a los costos se reducen inversiones iniciales en infraestructura y personal, pero se deben asumir gastos de transporte internacional, almacenamiento e ingresos compartidos con el distribuidor, afectando el margen final pero reduciendo significativamente el riesgo. Esta estrategia permite que la marca llegue rápido a tiendas deportivas, malls y puntos multimarca, apoyándose en la red y reputación del distribuidor, mientras que el e-commerce refuerza la visibilidad, control sobre la identidad de marca y el acceso directo al consumidor</p>
+        </div>
+      </Accordion>
+
+      <Accordion title="3. Plan de marketing internacional" defaultOpen={false} color="border-purple-200 bg-purple-50">
+        <div className="space-y-4">
+          <h4 className="font-semibold text-zinc-800">Estrategia de entrada al mercado</h4>
+          <p>La estrategia de entrada para Babalú en Panamá será una combinación de exportación directa desde Colombia y una alianza comercial con un distribuidor local. Esto permite ingresar rápido al mercado sin grandes inversiones iniciales y aprovechando la fuerte infraestructura logística de Panamá, que facilita el manejo del inventario, los tiempos de entrega y los costos de transporte. El distribuidor será clave para entrar a tiendas deportivas, centros comerciales y puntos multimarca donde ya se mueven marcas reconocidas.</p>
+          <p>Además, se complementará con un e-commerce propio para Panamá, lo que permitirá probar la demanda, aumentar la presencia digital y tener contacto directo con las consumidoras. Esta estrategia es la más adecuada para un mercado competitivo como Panamá, porque reduce el riesgo, mejora la visibilidad inicial y permite evaluar la aceptación de la marca antes de invertir en tiendas propias o franquicias.</p>
+
+          <h4 className="font-semibold text-zinc-800">Comercialización del Producto o Servicio</h4>
+          <ul className="list-disc pl-6 space-y-2">
+            <li>Marketing Digital: Se utilizará la plataforma de E-commerce propio como centro de la estrategia, soportado por publicidad pagada (SEM/Social Ads) dirigida específicamente a mujeres en Ciudad de Panamá. El objetivo es dirigir tráfico tanto a la tienda en línea para la venta directa como a los puntos de venta físicos del distribuidor.</li>
+            <li>Influencer Marketing: Colaboración con micro-influencers y coaches de fitness panameños. Estas alianzas se centrarán en la demostración de la versatilidad de las prendas y la tecnología de los textiles.</li>
+            <li>Relaciones Públicas y Eventos: Se buscará organizar un evento de lanzamiento o una clase magistral de fitness en alianza con un gimnasio premium local. El foco de la comunicación será el diseño innovador y la calidad de la confección colombiana.</li>
+            <li>Promociones y Lealtad (Precio): Se ofrecerán descuentos de introducción en el e-commerce y ofertas exclusivas en los puntos físicos ej. 20% off en la primera compra para incentivar la prueba del producto y la recolección de datos de clientes.</li>
+          </ul>
+          <p><strong>Babalu se  posicionarse como:</strong> "Activewear de diseño premium y alto rendimiento, fusionando la moda vanguardista colombiana con la funcionalidad deportiva que busca el consumidor de Panamá."</p>
+
+          <h4 className="font-semibold text-zinc-800">Segmentación del mercado</h4>
+          <p>Público Objetivo</p>
+          <p>El segmento se concentra en las Mujeres de 25 a 45 años, con nivel socioeconómico medio-alto y alto, residentes principalmente en la Ciudad de Panamá. Este grupo está activamente involucrado en el fitnessy el bienestar personal, es digitalmente competente y valora la diferenciación por diseño y calidad,son compradoras que buscan que su ropa deportiva tenga un estilo athleisure(ropa deportiva con prendas informales o elegantes para crear atuendos) que les permita transicionar del gimnasio a las actividades sociales.</p>
+
+          <h4 className="font-semibold text-zinc-800">Buyer Personas</h4>
+          <ul className="list-disc pl-6 space-y-2">
+            <li>Andrea, la Profesional Activa: es una ejecutiva de 32 años,su motivación es la versatilidad y  necesita que sus leggings y tops funcionen perfectamente en el gimnasio, pero que también la hagan sentir elegante y presentable para sus actividades post-entrenamiento y valora mucho  la calidad y la comodidad que justifica un precio más alto.</li>
+            <li>Sofía aficionada  de la Moda: Joven que tiene 27 años y su principal motivación es el diseño y la tendencia,usa su ropa deportiva para crear contenido en redes sociales y  busca estampados exclusivos y cortes innovadores que no se vean comúnmente en las marcas globales para destacar y ser única.</li>
+          </ul>
+        </div>
+      </Accordion>
+
+      <Accordion title="Características del producto o servicio" defaultOpen={false} color="border-amber-200 bg-amber-50">
+        <div className="space-y-4">
+          <p>La oferta de Babalú se compone de prendas de moda activa, incluyendo Leggings de Compresión, Tops Deportivos, Enterizos y Joggers Urbanos.</p>
+          <p>- El valor se muestra en el Diseño Colombiano con cortes que estilizan la figura y estampados exclusivos, se da prioridad a la  la tecnología textil, utilizando telas con alta compresión, control de humedad, secado rápido y protección UV, diferenciándose del fast fashion o sea moda rápida  en términos de rendimiento y durabilidad.</p>
+          <h4 className="font-semibold text-zinc-800">Beneficios (Producto)</h4>
+          <p>El beneficio es de valor ya que ofrece una prenda que brinda Rendimiento (apoyo y comodidad en el ejercicio) junto con Estilo Único que permite al cliente diferenciarse.</p>
+          <p>El cliente recibe una inversión en una prenda duradera y con un diseño exclusivo, evitando la uniformidad de las marcas globales y sintiéndose más seguro de su imagen fitness y urbana.</p>
+        </div>
+      </Accordion>
+
+      <Accordion title="Canales de distribución" defaultOpen={false} color="border-teal-200 bg-teal-50">
+        <div className="space-y-4">
+          <p>Babalú utilizará una estructura de distribución mixta para llegar al consumidor final de forma eficiente:</p>
+          <ul className="list-disc pl-6 space-y-2">
+            <li>Distribuidor local en Panamá: Será el encargado de colocar los productos en tiendas deportivas, puntos multimarca y centros comerciales. Esto ayuda a que la marca gane presencia física desde el primer momento sin tener que abrir locales propios.</li>
+            <li>E-commerce propio: Permitirá vender directamente a las consumidoras, mostrando todo el catálogo, manejando promociones y rotando inventario más rápido. También es útil para medir preferencias, tallas más pedidas y tendencias de compra.</li>
+            <li>Venta directa en eventos y alianzas: Se podrán hacer activaciones con gimnasios, estudios de yoga, entrenadores personales y ferias de bienestar para aumentar visibilidad y ventas.</li>
+          </ul>
+          <p>Esta mezcla de canales permite cubrir tanto la compra física como la digital, ofreciendo un alcance más amplio y flexible.</p>
+        </div>
+      </Accordion>
+
+      <Accordion title="Estrategias de precio" defaultOpen={false} color="border-lime-200 bg-lime-50">
+        <div className="space-y-4">
+          <p>Para entrar al mercado panameño, Babalú aplicará una estrategia de precios de penetración, es decir, precios accesibles y competitivos frente a marcas globales como Nike, Adidas o Under Armour.</p>
+          <p>La estructura de precios considerará:</p>
+          <ul className="list-disc pl-6 space-y-2">
+            <li>Costos de producción en Colombia, que son relativamente bajos gracias a la industria textil local.</li>
+            <li>Costos logísticos y de transporte internacional, que en Panamá son favorables debido a su infraestructura.</li>
+            <li>Margen del distribuidor, que debe ser rentable sin elevar demasiado el precio final.</li>
+            <li>Precios de la competencia, que tienden a ser altos en marcas internacionales, lo que deja espacio para que Babalú sea una opción de buena calidad a menor costo.</li>
+            <li>Percepción de valor, donde la marca se presenta como ropa deportiva moderna, cómoda y duradera.</li>
+          </ul>
+          <p>Esta estrategia permite que nuevos clientes se animen a probar la marca, genere rotación en tiendas y aumente la presencia de Babalú en el mercado de forma rápida.</p>
+        </div>
+      </Accordion>
+
+      <Accordion title="Análisis de clientes y competencia" defaultOpen={false} color="border-sky-200 bg-sky-50">
+        <div className="space-y-4">
+          <p>Los clientes potenciales son mujeres que conciben el fitness como una parte integral de su estilo de vida y están dispuestas a pagar un precio premium por el valor añadido de diseño exclusivo y calidad superior. Su motivación clave es la Diferenciación de su vestuario deportivo y la confianza que les da el respaldo logístico del distribuidor y la transparencia del e-commerce.</p>
+          <h4 className="font-semibold text-zinc-800">Competencia</h4>
+          <p>El mercado panameño está dominado por dos grupos principales de competidores:</p>
+          <p>Gigantes globales Nike, Adidas, Under Armour, tienen una Plaza excelente en malls. Su precio es alto, pero su principal debilidad es que sus diseños son más estandarizados y menos enfocados en las tendencias de moda rápida.</p>
+          <p>Fast Fashion Zara, H&amp;M ofrecen un Precio muy bajo. Su debilidad es la calidad y la tecnología textil inferior a la de Babalú.</p>
+        </div>
+      </Accordion>
+
+      <Accordion title="Conclusión del trabajo" defaultOpen={false} color="border-rose-200 bg-rose-50">
+        <div className="space-y-4">
+          <p>La conclusión general de este trabajo nos muestra  la viabilidad y solidez estratégica de la entrada de Babalú al mercado panameño. La decisión de elegir a Panamá se fundamenta en su estabilidad económica y su eficiencia logística como hub regional, lo que minimiza los riesgos financieros y operativos. El modelo de Exportación Directa + Distribuidor + E-commerce es la estrategia más acertada, ya que permite una rápida entrada  en la Plaza, malls y puntos multimarca con una inversión inicial baja, mientras el canal digital garantiza el control total de la marca y la rentabilidad. El Plan de Marketing es coherente al posicionar a Babalú como una marca de Diseño Premium y Alto Rendimiento, utilizando tácticas digitales para atraer al segmento clave de mujeres con poder adquisitivo que buscan diferenciación. Finalmente, el proceso de aprendizaje demostrado por el equipo en los resultados del test asegura que la base analítica para la implementación y futura expansión del proyecto es robusta y consciente de los desafíos del mercado.</p>
+        </div>
+      </Accordion>
+
+      <Accordion title="Conclusiones de los talleres" defaultOpen={false} color="border-indigo-200 bg-indigo-50">
+        <div className="space-y-4">
+          <h4 className="font-semibold text-zinc-800">Conclusión taller #2</h4>
+          <p>En el trabajo de “reto empresarial” pudimos ver que de Babalú es una marca de ropa deportiva colombiana. Se encuentra en una fase avanzada de planificación, con decisiones estratégicas bien definidas. El objetivo principal es la internacionalización al mercado chileno en un periodo de 12 meses, buscando alcanzar US$75.000 en ventas (SMART). La decisión de enfocarse en Chile se sostiene en su estabilidad económica, la afinidad cultural con Colombia, el alto nivel de digitalización y el crecimiento en la demanda de ropa deportiva. La estrategia de entrada prioriza el comercio digital (tienda virtual) y la alianza con distribuidores locales. A nivel interno, la marca capitaliza sus fortalezas clave, como su experiencia exportadora (a más de nueve países) y su capacidad productiva que asegura la calidad. Estas fortalezas se cruzan directamente con las Oportunidades de exportar servicios e iniciar proyectos de innovación con actores internacionales (Estrategia FO).  El principal desafío interno son las Debilidades relacionadas con el bajo manejo de una segunda lengua y la limitada experiencia internacional del equipo humano. La respuesta estratégica (Estrategia DO) es clara, diseñar un programa de formación en idiomas y temas globales para el equipo, junto con la búsqueda de alianzas para la innovación (DOFA). El compromiso de Babalú con la sostenibilidad social (generación de empleo digno, igualdad de género) y la calidad de los materiales (reducción de desperdicio textil) funciona como un diferenciador de alto valor. Sin embargo, la empresa debe estructurar formalmente sus políticas de sostenibilidad, equidad de género y responsabilidad social empresarial para mitigar las Amenazas de problemas de reputación y las exigencias de los mercados internacionales.</p>
+
+          <h4 className="font-semibold text-zinc-800">Conclusiones taller #3</h4>
+          <p>El análisis macroeconómico muestra que Panamá es un país favorable para la internacionalización gracias a la combinación de crecimiento económico sostenido que tiene, estabilidad monetaria y condiciones claras para la inversión. Durante los últimos años, ha mantenido un PIB alto, una inflación baja y predecible y una tasa de cambio estable. Los niveles de inversión pública y privada especialmente en entornos como la logística y la tecnología reflejan un entorno dinámico y orientado al comercio. Chile presenta un entorno macroeconómico estable, con instituciones sólidas, baja inflación y un crecimiento moderado pero sostenido, lo que lo convierte en un destino confiable para la internacionalización. Sus tasas de interés son controladas. Además, la inversión pública y privada mantienen un mercado competitivo y abierto. Chile ofrece condiciones favorables para ingresar con productos o servicios, teniendo un entorno económico, ordenado y de bajo riesgo.</p>
+
+          <h4 className="font-semibold text-zinc-800">Conclusion taller #5</h4>
+          <p>El análisis de los entornos permitió comprender el contexto interno y externo en el que se desarrolla el proyecto. Al estudiar factores económicos, sociales, tecnológicos, políticos y del mercado, fue posible identificar oportunidades que pueden impulsar el crecimiento de la marca, así como amenazas que deben ser gestionadas con estrategias claras.</p>
+          <p>Este ejercicio también mostró que la empresa no funciona de manera aislada, sino que depende de cambios y tendencias del entorno. Gracias a esto, se fortaleció la capacidad para anticipar retos, reconocer ventajas competitivas y tomar decisiones más informadas. En general, el análisis de los entornos aportó una visión amplia y realista del panorama en el que se mueve el proyecto, y se convirtió en una base sólida para las siguientes etapas del núcleo.</p>
+        </div>
+      </Accordion>
+    </div>
+  );
+
+  const testSalidaContent = (
+    <div className="space-y-6">
+      <div className="text-center">
+        <h2 className="mb-2 text-3xl font-bold text-zinc-800">Test de salida</h2>
+        <p className="text-zinc-600">Comparaciones (texto íntegro del documento)</p>
+      </div>
+      <Accordion title="Comparación: Mariana Serna Borja" defaultOpen={true} color="border-pink-200 bg-pink-50">
+        <img src="/grupal_assets/doc4_image3.png" alt="Mariana Serna Borja" className="w-full h-auto" />
+        <p>Al comparar el test de entrada con el de salida, me di cuenta de que en el test final solo tuve un error. Aunque me demoré un poco más en completarlo, el resultado fue mucho mejor. Esto me permitió ver que mis conocimientos crecieron bastante. Ahora tengo mucha más comprensión sobre la internacionalización, algo que no dominaba cuando inicié el núcleo. Por eso, al momento de responder, no se me hizo tan difícil escoger las opciones correctas.                                                                                       Los contenidos del núcleo me dieron herramientas para entender mejor diferentes problemáticas y situaciones, como las que aparecían en el test. Además, el hecho de que este núcleo tuviera tanta investigación hizo que mis aprendizajes aumentaran mucho más, y eso se reflejó claramente en el test de salida.</p>
+      </Accordion>
+      <Accordion title="Comparación: Santiago Castaño Ramírez" defaultOpen={false} color="border-blue-200 bg-blue-50">
+        <img src="/grupal_assets/doc4_image2.png" alt="Santiago Castaño Ramírez" className="w-full h-auto" />
+        <p>Al hacer la comparación del test de entrada y el de salida vi que el puntaje subió de manera significativa. En el test de entrada obtuve un puntaje de 600 puntos, mientras que en el test de salida obtuve uno de 865 puntos de 1000 posibles. Lo que quiere decir que ahora tengo una visión mucho más integral y clara de los procesos de internacionalización y todo lo que implican. Las herramientas que me dió el núcleo fueron sumamente acertadas para la realización del test de salida y además para llevar a cabo todos los trabajos, y más importante, para seguir formándome como profesional.</p>
+      </Accordion>
+      <Accordion title="Comparación: Mariana Zapata Ramírez" defaultOpen={false} color="border-purple-200 bg-purple-50">
+        <img src="/grupal_assets/doc4_image4.png" alt="Mariana Zapata Ramírez" className="w-full h-auto" />
+        <p>Al comparar los resultados del test de entrada con los del test de salida, noté que mi puntaje no fue tan alto como el inicial. Sin embargo, esta vez me tomé el tiempo para leer, analizar y comprender mejor cada pregunta, por lo que el proceso fue más profundo, aunque tardará más. A pesar de todo, considero que obtuve un buen resultado y me siento satisfecha. Siento que ahora manejo mucho mejor los temas de internacionalización y he aprendido muchas cosas que en el primer test no tenía tan claras.</p>
+      </Accordion>
+      <Accordion title="Comparación: Juan José Cárdenas" defaultOpen={false} color="border-amber-200 bg-amber-50">
+        <img src="/grupal_assets/doc4_image1.png" alt="Juan José Cárdenas" className="w-full h-auto" />
+        <p>Al comparar los resultados del test de entrada con los del test de salida, observé que mi puntaje se mantuvo . Igual en ambas evaluaciones. Esto muestra que no hubo un aumento significativo en mi resultado final, a pesar de que la meta era obtener un puntaje más alto en el test de salida.Sin embargo, durante el proceso sí hubo aprendizaje. En el test de salida respondí cada pregunta con más conciencia, entendiendo mejor los temas y analizando cada opción antes de contestar. Aunque el puntaje no refleja un cambio, considero que mi forma de abordar el test fue más segura y ordenada, lo que demuestra que sí hubo un avance en mi comprensión del núcleo</p>
+      </Accordion>
+    </div>
+  );
+
+  const referenciasGrupalContent = (
+    <div className="space-y-4">
+      <div className="text-center">
+        <h2 className="mb-2 text-3xl font-bold text-zinc-800">Referencias</h2>
+        <p className="text-zinc-600">Listado íntegro en formato APA (tal cual en el documento)</p>
+      </div>
+      <ul className="list-disc pl-6 space-y-2">
+        <li>Babalú. (2025). Página oficial de Babalú Moda Activa. Recuperado el 27 de octubre de 2025, de https://babalu.co</li>
+        <li>Babalú. (2025). Quiénes somos. Recuperado el 27 de octubre de 2025, de https://babalu.com.co/quienes-somos</li>
+
+        <li>Banco Mundial. (2020). Doing Business 2020: Comparing business regulation in 190 economies – Economy profile of Panama. https://documents1.worldbank.org/...</li>
+        <li>Banco Mundial. (2024). Chile: Panorama general. Recuperado de https://www.bancomundial.org/...</li>
+        <li>Banco Mundial. (2024). Gini index: Panama [Indicador SI.POV.GINI]. https://data.worldbank.org/...</li>
+        <li>Banco Mundial. (2024). Research and development expenditure (% of GDP): Panama [Indicador GB.XPD.RSDV.GD.ZS]. https://data.worldbank.org/...</li>
+        <li>Banco Mundial. (2024). World Development Indicators. https://data.worldbank.org/</li>
+        <li>Banco Mundial. (2024). Worldwide Governance Indicators: Government effectiveness, percentile rank – Panama [Indicador GE.PER.RNK]. https://data.worldbank.org/...</li>
+        <li>Banco Mundial. (s.f.). Panamá: Panorama general [Perfil país]. https://datos.bancomundial.org/country/panama</li>
+
+        <li>CEIPA. (2025). Datos empresariales de Babalu [Archivo de Microsoft Excel]. CEIPA.</li>
+        <li>Ceipa Talks. (s. f.). Episodio 3: Sostenibilidad en los Negocios Internacionales: Con Ana María Gómez.</li>
+        <li>Comisión Económica para América Latina y el Caribe (CEPAL). (2023). Panorama económico de América Latina y el Caribe 2023. Naciones Unidas. Recuperado de https://www.cepal.org/...</li>
+        <li>Czinkota, M. R., & Ronkainen, I. A. (2013). International marketing (10th ed.). Cengage Learning.</li>
+        <li>Departamento Administrativo Nacional de Estadística – DANE. (2025). Indicadores económicos de coyuntura: inflación y PIB en Colombia. Recuperado de https://www.dane.gov.co</li>
+        <li>Global Carbon Atlas. (2024). CO₂ emissions per capita. http://www.globalcarbonatlas.org</li>
+        <li>Inexmoda. (2025, febrero). Observatorio de la Moda – Febrero 2025: Desempeño del Sistema Moda Colombiano. Recuperado de https://inexmoda.org.co/...</li>
+        <li>International Monetary Fund. (2024). World Economic Outlook Database. https://www.imf.org/en/Data</li>
+        <li>Kotler, P., & Keller, K. L. (2016). Marketing management (15th ed.). Pearson Education.</li>
+
+        <li>Ministerio de Ambiente y Desarrollo Sostenible de Colombia. (2022). Ley 2232 de 2022 – Por la cual se regula el uso de plásticos de un solo uso. Diario Oficial 52.126. Recuperado de https://www.minambiente.gov.co/</li>
+        <li>Ministerio de Comercio, Industria y Turismo. (2025). Políticas de apoyo al sector textil y confección en Colombia. Recuperado de https://www.mincit.gov.co</li>
+        <li>Ministerio del Medio Ambiente de Chile. (2023). Estrategia nacional de consumo y producción sustentable. Gobierno de Chile. Recuperado de https://mma.gob.cl</li>
+
+        <li>OECD. (2024). Economic survey of Chile 2024. Organisation for Economic Co-operation and Development. Recuperado de https://www.oecd.org/chile</li>
+        <li>OECD. (2024). Gross domestic spending on R&amp;D. https://data.oecd.org/</li>
+        <li>Osterwalder, A., & Pigneur, Y. (2010). Business model generation: A handbook for visionaries, game changers, and challengers.</li>
+        <li>Porter, M. E. (1990). The competitive advantage of nations. New York: Free Press.</li>
+        <li>ProChile. (2024). Estrategias de expansión internacional y comercio exterior. Gobierno de Chile. Recuperado de https://www.prochile.gob.cl</li>
+        <li>ProChile. (2024). Guía para la internacionalización de empresas chilenas y extranjeras. Gobierno de Chile. Recuperado de https://www.prochile.gob.cl</li>
+        <li>Statista. (2024). Crecimiento del mercado de productos naturales y sostenibles en Chile (2020–2025) [Datos estadísticos]. Recuperado de https://www.statista.com</li>
+        <li>Statista. (2024). Participación del mercado de cosmética y cuidado personal en Chile (2019–2025) [Datos estadísticos]. Recuperado de https://www.statista.com</li>
+        <li>United Nations Development Programme. (2024). Climate & Environment Data. https://www.undp.org</li>
+        <li>Yale Center for Environmental Law & Policy. (2024). Environmental Performance Index (EPI). https://epi.yale.edu</li>
+      </ul>
+    </div>
+  );
+
+  const videoFinalContent = (
+    <div className="space-y-4">
+      <div className="text-center">
+        <h2 className="mb-2 text-3xl font-bold text-zinc-800">Video final</h2>
+        <p className="text-zinc-600">Inserta aquí el recurso del video final (URL o embed)</p>
+      </div>
+      <p>Contenido pendiente de enlace o archivo de video. Cuando nos compartas el enlace, lo integramos aquí como reproductor.</p>
+    </div>
+  );
+
   const tabs = [
     { key: "panama", label: "Panamá", content: panamaContent },
     { key: "chile", label: "Chile", content: chileContent },
@@ -930,6 +1128,10 @@ export default function Page() {
     { key: "powerbi", label: "Power BI", content: powerBIContent },
     { key: "powerbi_t4", label: "Power BI (T4)", content: powerBITrabajo4Content },
     { key: "comparativo", label: "Cuadro comparativo", content: comparativoContent },
+    { key: "panama_int", label: "Panamá internacionalización", content: panamaInternacionalizacionContent },
+    { key: "test_salida", label: "Test de salida", content: testSalidaContent },
+    { key: "ref_grupal", label: "Referencias (Grupal)", content: referenciasGrupalContent },
+    { key: "video_final", label: "Video final", content: videoFinalContent },
   ];
 
   return (
