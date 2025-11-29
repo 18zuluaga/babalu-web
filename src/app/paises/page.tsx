@@ -1114,9 +1114,33 @@ export default function Page() {
     <div className="space-y-4">
       <div className="text-center">
         <h2 className="mb-2 text-3xl font-bold text-zinc-800">Video final</h2>
-        <p className="text-zinc-600">Inserta aquí el recurso del video final (URL o embed)</p>
+        <p className="text-zinc-600">Video grupal integrado desde YouTube</p>
       </div>
-      <p>Contenido pendiente de enlace o archivo de video. Cuando nos compartas el enlace, lo integramos aquí como reproductor.</p>
+      <div
+        className="relative w-full overflow-hidden rounded-xl bg-zinc-100 shadow-sm"
+        style={{ paddingTop: "56.25%" }}
+      >
+        <iframe
+          className="absolute left-0 top-0 h-full w-full"
+          src="https://www.youtube.com/embed/qQ6r6Cr3NF8?si=RXV9MdqtCw8Of5Eb"
+          title="Video final grupal"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerPolicy="strict-origin-when-cross-origin"
+          allowFullScreen
+        />
+      </div>
+      <p className="text-center text-sm text-zinc-500">
+        Si el reproductor no carga, abre el video aquí:{" "}
+        <a
+          href="https://youtu.be/qQ6r6Cr3NF8?si=RXV9MdqtCw8Of5Eb"
+          target="_blank"
+          rel="noreferrer"
+          className="text-purple-600 underline"
+        >
+          YouTube
+        </a>
+        .
+      </p>
     </div>
   );
 
